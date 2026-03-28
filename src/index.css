@@ -20,7 +20,7 @@ body {
 @layer utilities {
   .text-h1 {
     font-size: 40px;
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 700;
   }
   @media (min-width: 768px) {
@@ -30,7 +30,7 @@ body {
   }
   .text-h2 {
     font-size: 28px;
-    line-height: 1.2;
+    line-height: 1.3;
     font-weight: 600;
   }
   @media (min-width: 768px) {

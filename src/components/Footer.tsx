@@ -1,0 +1,27 @@
+import { X, Linkedin, Facebook } from "lucide-react";
+
+export function Footer() {
+  return (
+    <footer className="relative z-10 py-12 px-6 border-t border-white/10 bg-zinc-950">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+          <div className="flex flex-wrap items-center gap-6 text-xs text-zinc-500">
+            <span>© 2026 Takeover Marketing Inc.</span>
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+          </div>
+          <div className="flex items-center gap-6">
+            <a href="#" className="text-zinc-500 hover:text-white transition-colors"><X className="w-4 h-4" /></a>
+            <a href="#" className="text-zinc-500 hover:text-white transition-colors"><Linkedin className="w-4 h-4" /></a>
+            <a href="#" className="text-zinc-500 hover:text-white transition-colors"><Facebook className="w-4 h-4" /></a>
+          </div>
+        </div>
+        <div className="text-[10px] leading-relaxed text-zinc-600 max-w-4xl">
+          Takeover Marketing is a trademark or registered trademark of Takeover Marketing Technologies Inc. Any other trademarks are the property of their respective owners. Unless otherwise noted, use of third party logos does not imply endorsement of, sponsorship of, or affiliation with Takeover Marketing.
+          <br /><br />
+          Takeover Marketing is a marketing technology company, not an agency. Marketing services are provided by our automated platform and verified partners.
+        </div>
+      </div>
+    </footer>
+  );
+}
