@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { Check, Zap } from "lucide-react";
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
@@ -10,11 +11,13 @@ const plans = [
     period: "/month",
     description: "Perfect for small businesses looking to establish their presence.",
     features: [
-      "High-performance Website",
-      "Basic SEO Optimization",
-      "Lead Capture Integration",
-      "Monthly Performance Report",
-      "Email Support"
+      "High-Performance Website",
+      "On-Site SEO Optimization",
+      "One Click 5 Star Google Review Funnel",
+      "On-Site Booking Calendar",
+      "Missed Call Text Back",
+      "Automated Lead Capture Integration",
+      "Live Lead Tracking App"
     ],
     highlight: false
   },
@@ -26,11 +29,7 @@ const plans = [
     description: "The ultimate package for businesses ready to scale aggressively.",
     features: [
       "15 Months total (3 Months free)",
-      "Everything in Monthly",
-      "Advanced SEO Dominance",
-      "Live Lead Tracking App",
-      "Priority 24/7 Support",
-      "Automated Follow-up Systems"
+      "Everything in Monthly"
     ],
     highlight: true
   }
@@ -52,7 +51,7 @@ export default function Pricing() {
             <div className="inline-block rounded-full font-bold px-3 py-1 bg-[#a60724]/20 text-[#a60724] mb-4 text-xs uppercase tracking-wider">
               Pricing Plans
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 pb-2 bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">
               Simple, transparent pricing for every stage.
             </h1>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
@@ -108,13 +107,13 @@ export default function Pricing() {
                   ))}
                 </div>
 
-                <button className={`w-full py-4 rounded-xl font-bold transition-all ${
+                <Link to="/contact" className={`w-full py-4 rounded-xl font-bold transition-all text-center ${
                   plan.highlight
                     ? "bg-[#a60724] hover:bg-[#8a061e] text-white shadow-[0_4px_20px_-4px_rgba(166,7,36,0.5)]"
                     : "bg-white/5 hover:bg-white/10 border border-white/10 text-white"
                 }`}>
                   Get Started
-                </button>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -127,9 +126,9 @@ export default function Pricing() {
           >
             <h4 className="text-xl font-bold mb-2">Need a custom solution?</h4>
             <p className="text-zinc-400 mb-6">We offer tailored enterprise packages for high-volume businesses.</p>
-            <button className="text-[#a60724] font-bold hover:underline flex items-center gap-2 mx-auto">
+            <Link to="/contact" className="text-[#a60724] font-bold hover:underline flex items-center gap-2 mx-auto w-fit">
               Contact our sales team <Zap className="w-4 h-4" />
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>

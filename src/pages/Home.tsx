@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { 
   ChevronDown, 
   Zap, 
@@ -53,11 +54,11 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="flex flex-col items-center justify-center gap-6"
           >
-            <button className="group relative px-8 py-4 rounded-full bg-zinc-950 border border-white/10 shadow-[0_4px_16px_-4px_rgba(166,7,36,0.5)] transition-all hover:border-[#a60724]/60 hover:shadow-[0_-12px_24px_-8px_rgba(166,7,36,0.6),0_12px_24px_-8px_rgba(166,7,36,0.6)]">
-              <span className="relative z-10 font-medium">Book a Call</span>
+            <Link to="/contact" className="group relative px-8 py-4 rounded-full bg-zinc-950 border border-white/10 shadow-[0_4px_16px_-4px_rgba(166,7,36,0.5)] transition-all hover:border-[#a60724]/60 hover:shadow-[0_-12px_24px_-8px_rgba(166,7,36,0.6),0_12px_24px_-8px_rgba(166,7,36,0.6)]">
+              <span className="relative z-10 font-medium text-white">Book a Call</span>
               <div className="absolute -top-[1px] left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#a60724] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
               <div className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#a60724] to-transparent transition-opacity duration-300 group-hover:opacity-0 z-20" />
-            </button>
+            </Link>
             <a href="#features" className="flex flex-col items-center gap-2 text-zinc-400 hover:text-white transition-colors group text-sm">
               Learn more
               <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
@@ -358,11 +359,11 @@ export default function Home() {
           <p className="text-zinc-400 text-lg mb-10">
             The first marketing tool you'll love. And the last one you'll ever need.
           </p>
-          <button className="group relative px-8 py-3 rounded-full bg-zinc-950 border border-white/20 shadow-[0_4px_16px_-4px_rgba(166,7,36,0.5)] hover:border-[#a60724]/60 hover:shadow-[0_-12px_24px_-8px_rgba(166,7,36,0.6),0_12px_24px_-8px_rgba(166,7,36,0.6)] transition-all text-sm font-medium">
+          <Link to="/contact" className="group relative px-8 py-3 rounded-full bg-zinc-950 border border-white/20 shadow-[0_4px_16px_-4px_rgba(166,7,36,0.5)] hover:border-[#a60724]/60 hover:shadow-[0_-12px_24px_-8px_rgba(166,7,36,0.6),0_12px_24px_-8px_rgba(166,7,36,0.6)] transition-all text-sm font-medium inline-block text-white">
             <span className="relative z-10">Book a Call</span>
             <div className="absolute -top-[1px] left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#a60724] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
             <div className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#a60724] to-transparent transition-opacity duration-300 group-hover:opacity-0 z-20" />
-          </button>
+          </Link>
         </div>
       </section>
 

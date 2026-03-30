@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { useEffect } from "react";
 import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
+import Contact from "./pages/Contact";
 import { ParticleBackground } from "./components/ParticleBackground";
 
 function ScrollToTop() {
@@ -53,6 +54,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>
