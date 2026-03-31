@@ -45,7 +45,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-body text-zinc-400 mb-12 max-w-2xl mx-auto"
           >
-            Say goodbye to outdated growth tools. Every business owner, regardless of their background, can now scale their brand like a pro. Simple. Intuitive. And never boring.
+            Premium website and marketing solutions for all service-based businesses. From contractors to restaurants, we empower every business owner to scale their brand with simple, intuitive tools.
           </motion.p>
 
           <motion.div 
@@ -357,7 +357,7 @@ export default function Home() {
             See where marketing automation can <br /> take your business.
           </h2>
           <p className="text-zinc-400 text-lg mb-10">
-            The first marketing tool you'll love. And the last one you'll ever need.
+            Premium website and marketing solutions for contractors, restaurants, and all service-based businesses. The last growth tool you'll ever need.
           </p>
           <Link to="/contact" className="group relative px-8 py-3 rounded-full bg-zinc-950 border border-white/20 shadow-[0_4px_16px_-4px_rgba(166,7,36,0.5)] hover:border-[#a60724]/60 hover:shadow-[0_-12px_24px_-8px_rgba(166,7,36,0.6),0_12px_24px_-8px_rgba(166,7,36,0.6)] transition-all text-sm font-medium inline-block text-white">
             <span className="relative z-10">Book a Call</span>
