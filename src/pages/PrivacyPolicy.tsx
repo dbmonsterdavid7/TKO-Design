@@ -268,6 +268,7 @@ export default function PrivacyPolicy() {
                 <h2>Overview</h2>
                 <p>This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You use the Service, and tells You about Your privacy rights and how the law protects You.</p>
                 <p>We use Your Personal Data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+                <p className="mt-4 font-medium text-white italic">Text messaging originator opt-in data and consent will not be shared with any third parties, except for aggregators and providers of the Text Message services.</p>
               </div>
 
               {/* Interpretation & Definitions */}
@@ -301,7 +302,7 @@ export default function PrivacyPolicy() {
               {/* Data Collected */}
               <div className="section" id="data-collected">
                 <h2>Collecting Your Data</h2>
-                <h3>Personal Data</h3>
+                <p>The Company may collect Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
                 <p>While using Our Service, We may ask You to provide personally identifiable information that can be used to contact or identify You. This may include, but is not limited to:</p>
                 <ul>
                   <li>First name and last name</li>
@@ -319,6 +320,7 @@ export default function PrivacyPolicy() {
                 <h2>Opt-In &amp; Contact</h2>
                 <div className="highlight-card">
                   <p>By providing Your first and last name, email address, and phone number, and opting in to receive communications from Us, You consent to being contacted by the Company using the information You have provided. We may use this information to reach out to You by email, phone call, or SMS regarding Our services, offers, updates, and other relevant communications.</p>
+                  <p className="mt-4 font-medium text-white">No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer is permitted. All other use case categories exclude text messaging originator opt-in data and consent, this information will not be shared with any third parties.</p>
                 </div>
               </div>
 
@@ -352,7 +354,7 @@ export default function PrivacyPolicy() {
               {/* Use of Data */}
               <div className="section" id="use">
                 <h2>Use of Your Data</h2>
-                <p>The Company may use Personal Data for the following purposes:</p>
+                <p>The Company may use Personal Data for the following purposes (subject to the mobile and text messaging exceptions below):</p>
                 <ul>
                   <li><strong>To provide and maintain our Service</strong>, including monitoring usage.</li>
                   <li><strong>To manage Your Account</strong> and its associated functionalities.</li>
@@ -365,21 +367,13 @@ export default function PrivacyPolicy() {
                 </ul>
 
                 <h3>Data Sharing</h3>
-                <p>We may share Your Personal Data in these situations:</p>
-                <ul>
-                  <li><strong>With Service Providers</strong> to monitor, analyze, or operate our Service.</li>
-                  <li><strong>For business transfers</strong> during negotiations of any merger or acquisition.</li>
-                  <li><strong>With Affiliates</strong> who are required to honor this Privacy Policy.</li>
-                  <li><strong>With business partners</strong> to offer certain products, services, or promotions.</li>
-                  <li><strong>With other users</strong> in any public areas of the Service.</li>
-                  <li><strong>With Your consent</strong> for any other disclosed purpose.</li>
-                </ul>
+                <p className="mt-4 font-medium text-white italic">No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer is permitted. All other use case categories exclude text messaging originator opt-in data and consent, this information will not be shared with any third parties.</p>
               </div>
 
               {/* Retention */}
               <div className="section" id="retention">
                 <h2>Data Retention</h2>
-                <p>We retain Your Personal Data only as long as necessary for the purposes set out in this Privacy Policy. Retention periods by category:</p>
+                <p>The Company may retain Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
                 <table className="data-table">
                   <thead><tr><th>Category</th><th>Retention Period</th></tr></thead>
                   <tbody>
@@ -396,20 +390,20 @@ export default function PrivacyPolicy() {
               {/* Transfer */}
               <div className="section" id="transfer">
                 <h2>Data Transfer</h2>
-                <p>Your information may be transferred to and maintained on computers located outside Your state or country where data protection laws may differ. The Company will take all steps reasonably necessary to ensure Your data is treated securely and in accordance with this Privacy Policy. No transfer will occur unless adequate controls are in place.</p>
+                <p>The Company may transfer Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
               </div>
 
               {/* Delete / Rights */}
               <div className="section" id="delete">
                 <h2>Your Rights</h2>
-                <p>You have the right to delete or request that We assist in deleting the Personal Data We have collected about You. You may update, amend, or delete Your information at any time by signing in to Your Account or by contacting Us directly.</p>
+                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
                 <p>Please note that We may need to retain certain information when We have a legal obligation or lawful basis to do so.</p>
               </div>
 
               {/* Disclosure */}
               <div className="section" id="disclosure">
                 <h2>Disclosure</h2>
-                <h3>Business Transactions</h3>
+                <p>The Company may disclose Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
                 <p>If the Company is involved in a merger, acquisition, or asset sale, Your Personal Data may be transferred. We will provide notice before Your data becomes subject to a different Privacy Policy.</p>
 
                 <h3>Law Enforcement</h3>
@@ -429,32 +423,32 @@ export default function PrivacyPolicy() {
               {/* Security */}
               <div className="section" id="security">
                 <h2>Security</h2>
-                <p>The security of Your Personal Data is important to Us. While We strive to use commercially reasonable means to protect Your Personal Data, no method of transmission over the Internet or electronic storage is 100% secure, and We cannot guarantee its absolute security.</p>
+                <p>The Company may secure Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
               </div>
 
               {/* Children */}
               <div className="section" id="children">
                 <h2>Children's Privacy</h2>
-                <p>Our Service does not address anyone under the age of 16. We do not knowingly collect personally identifiable information from anyone under 16. If You are a parent or guardian and believe Your child has provided Us with Personal Data, please contact Us and We will take steps to remove that information from Our servers.</p>
+                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
               </div>
 
               {/* Links */}
               <div className="section" id="links">
                 <h2>External Links</h2>
-                <p>Our Service may contain links to third-party websites not operated by Us. We strongly advise You to review the Privacy Policy of every site You visit. We have no control over and assume no responsibility for the content or practices of any third-party sites or services.</p>
+                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
               </div>
 
               {/* Changes */}
               <div className="section" id="changes">
                 <h2>Policy Changes</h2>
-                <p>We may update Our Privacy Policy from time to time and will notify You of changes by posting the new policy on this page. We will also let You know via email and/or a prominent notice on Our Service prior to the change becoming effective, and will update the "Last updated" date at the top of this policy.</p>
+                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
                 <p>You are advised to review this Privacy Policy periodically. Changes are effective when posted.</p>
               </div>
 
               {/* Contact */}
               <div className="section" id="contact">
                 <h2>Contact Us</h2>
-                <p>If You have any questions about this Privacy Policy, You can contact us:</p>
+                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
                 <div className="highlight-card">
                   <p>By email: <a href="mailto:contact@tkovermarketing.com" className="text-[#A60724] underline">contact@tkovermarketing.com</a></p>
                 </div>
