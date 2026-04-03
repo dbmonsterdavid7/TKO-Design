@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { X, Linkedin, Facebook } from "lucide-react";
 
 export function Footer() {
@@ -7,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
           <div className="flex flex-wrap items-center gap-6 text-xs text-zinc-500">
             <span>© 2026 Takeover Marketing Inc.</span>
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
           </div>
           <div className="flex items-center gap-6">
