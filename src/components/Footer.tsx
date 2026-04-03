@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex flex-wrap items-center gap-6 text-xs text-zinc-500">
             <span>© 2026 Takeover Marketing Inc.</span>
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
           </div>
           <div className="flex items-center gap-6">
             <a href="#" className="text-zinc-500 hover:text-white transition-colors"><X className="w-4 h-4" /></a>
