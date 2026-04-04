@@ -357,7 +357,7 @@ export default function Home() {
             See where marketing automation can <br /> take your business.
           </h2>
           <p className="text-zinc-400 text-lg mb-10">
-            Premium website and marketing solutions for contractors, restaurants, and all service-based businesses. The last growth tool you'll ever need.
+            Premium website and marketing solutions for contractors, medical spas, and all service-based businesses. The last growth tool you'll ever need.
           </p>
           <Link to="/contact" className="group relative px-8 py-3 rounded-full bg-zinc-950 border border-white/20 shadow-[0_4px_16px_-4px_rgba(166,7,36,0.5)] hover:border-[#a60724]/60 hover:shadow-[0_-12px_24px_-8px_rgba(166,7,36,0.6),0_12px_24px_-8px_rgba(166,7,36,0.6)] transition-all text-sm font-medium inline-block text-white">
             <span className="relative z-10">Book a Call</span>
