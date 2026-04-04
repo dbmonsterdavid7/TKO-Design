@@ -28,7 +28,7 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative z-10 pt-10 md:pt-20 pb-32 px-6 overflow-hidden">
+      <section className="relative z-10 pt-10 md:pt-20 pb-12 md:pb-32 px-6 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -111,7 +111,7 @@ export default function Home() {
       </section>
 
       {/* Detailed Feature Sections */}
-      <div id="features" className="pt-24 space-y-32">
+      <div id="features" className="pt-12 md:pt-24 space-y-32">
         {/* Section 1: Preview */}
         <section id="preview" className="max-w-5xl mx-auto px-6">
           <div className="flex gap-4 lg:gap-8">
