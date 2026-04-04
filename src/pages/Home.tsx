@@ -36,7 +36,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-h1 mb-8 pb-4 bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent"
           >
-            Unleash the power of intuitive marketing
+            Websites built to get you more customers
           </motion.h1>
           
           <motion.p 

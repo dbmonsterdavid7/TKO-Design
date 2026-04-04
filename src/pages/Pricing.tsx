@@ -37,7 +37,7 @@ const plans = [
     name: "Website",
     price: "97",
     period: "/month",
-    breakdown: "+ $300 setup fee",
+    breakdown: "+ one time $300 setup fee",
     description: "Best for new or small businesses to get your company online.",
     features: [
       "High-Performance Website",
