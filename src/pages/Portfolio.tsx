@@ -37,7 +37,7 @@ const portfolioItems = [
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <Navigation />
       
       <main className="flex-grow pt-20 pb-32 px-6">
@@ -96,6 +96,6 @@ export default function Portfolio() {
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 }
