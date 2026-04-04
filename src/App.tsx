@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import { ParticleBackground } from "./components/ParticleBackground";
@@ -57,6 +58,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
         </Routes>
