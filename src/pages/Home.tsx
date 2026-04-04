@@ -45,7 +45,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-body text-zinc-400 mb-12 max-w-2xl mx-auto"
           >
-            Premium website and marketing solutions for all service-based businesses. From contractors to restaurants, we empower every business owner to scale their brand with simple, intuitive tools.
+            Premium website and marketing solutions for all service-based businesses. From contractors to medical spas, we empower every business owner to scale their brand with simple, intuitive tools.
           </motion.p>
 
           <motion.div 
@@ -88,7 +88,7 @@ export default function Home() {
               </div>
               <div className="p-6 rounded-xl bg-zinc-800/50 border border-white/5">
                 <p className="text-sm text-zinc-500 mb-1">Conversion Rate</p>
-                <p className="text-2xl font-bold">4.82%</p>
+                <p className="text-2xl font-bold">19.82%</p>
                 <div className="mt-2 text-xs text-zinc-500">Real-time tracking</div>
               </div>
               <div className="p-6 rounded-xl bg-zinc-800/50 border border-white/5">

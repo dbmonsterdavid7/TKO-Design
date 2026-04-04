@@ -5,7 +5,7 @@ export function Navigation() {
   return (
     <nav className="relative z-50 flex items-center justify-between px-6 py-2 md:py-4 mx-auto max-w-7xl">
       <Link to="/" className="flex items-center gap-3">
-        <img src="/logo.png" alt="Takeover Marketing Logo" className="w-6 h-6 md:w-12 md:h-12 object-contain" referrerPolicy="no-referrer" />
+        <img src="https://lh3.googleusercontent.com/d/1sho8dWDi-MCebAi3XaxFl6Lrh0VK8ZPj" alt="Takeover Marketing Logo" className="w-6 h-6 md:w-12 md:h-12 object-contain" referrerPolicy="no-referrer" />
         <span className="text-xl font-bold tracking-tight hidden sm:inline">Takeover Marketing</span>
         <span className="text-xl font-bold tracking-tight sm:hidden">Takeover</span>
       </Link>

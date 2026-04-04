@@ -6,10 +6,10 @@ import { Footer } from "../components/Footer";
 
 const plans = [
   {
-    name: "Monthly",
+    name: "Website + Automations",
     price: "269",
     period: "/month",
-    description: "Perfect for small businesses looking to establish their presence.",
+    description: "Perfect for businesses looking to establish their presence and close more clients.",
     features: [
       "High-Performance Website",
       "On-Site SEO Optimization",
@@ -29,9 +29,23 @@ const plans = [
     description: "The ultimate package for businesses ready to scale aggressively.",
     features: [
       "15 Months total (3 Months free)",
-      "Everything in Monthly"
+      "Everything in Website + Automations"
     ],
     highlight: true
+  },
+  {
+    name: "Website",
+    price: "97",
+    period: "/month",
+    breakdown: "+ $300 setup fee",
+    description: "Best for new or small businesses to get your company online.",
+    features: [
+      "High-Performance Website",
+      "On-Site SEO Optimization",
+      "On-Site Booking Calendar",
+      "24/7 Support"
+    ],
+    highlight: false
   }
 ];
 
@@ -63,8 +77,8 @@ export default function Pricing() {
 
       {/* Section 2: Pricing Cards */}
       <section className="relative z-10 pb-32 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
               <motion.div
                 key={plan.name}
@@ -89,7 +103,8 @@ export default function Pricing() {
                 </div>
 
                 <div className="mb-8 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">${plan.price}</span>
+                  {plan.price !== "Custom" && <span className="text-4xl font-bold">$</span>}
+                  <span className="text-4xl font-bold">{plan.price}</span>
                   <span className="text-zinc-500 text-sm">{plan.period}</span>
                   {plan.breakdown && (
                     <span className="text-zinc-500 text-xs ml-1">{plan.breakdown}</span>
