@@ -71,33 +71,33 @@ export default function Home() {
           initial={{ opacity: 0, y: 40, rotateX: 15 }}
           animate={{ opacity: 1, y: 0, rotateX: 0 }}
           transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
-          className="mt-24 max-w-6xl mx-auto rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-xl shadow-2xl overflow-hidden"
+          className="mt-12 md:mt-24 max-w-6xl mx-auto rounded-2xl border border-white/10 bg-zinc-900/50 backdrop-blur-xl shadow-2xl overflow-hidden"
           style={{ perspective: "1000px" }}
         >
-          <div className="h-12 border-b border-white/5 flex items-center px-4 gap-2">
-            <div className="w-3 h-3 rounded-full bg-red-500/80" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-            <div className="w-3 h-3 rounded-full bg-green-500/80" />
+          <div className="h-8 md:h-12 border-b border-white/5 flex items-center px-4 gap-2">
+            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-red-500/80" />
+            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-500/80" />
+            <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-500/80" />
           </div>
-          <div className="p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-6 rounded-xl bg-zinc-800/50 border border-white/5">
-                <p className="text-sm text-zinc-500 mb-1">Leads today</p>
-                <p className="text-2xl font-bold">1,036</p>
-                <div className="mt-2 text-xs text-emerald-500">+21% from yesterday</div>
+          <div className="p-4 md:p-8">
+            <div className="grid grid-cols-3 gap-2 md:gap-6">
+              <div className="p-3 md:p-6 rounded-xl bg-zinc-800/50 border border-white/5">
+                <p className="text-[10px] md:text-sm text-zinc-500 mb-0.5 md:mb-1">Leads today</p>
+                <p className="text-sm md:text-2xl font-bold">1,036</p>
+                <div className="mt-1 md:mt-2 text-[8px] md:text-xs text-emerald-500">+21%</div>
               </div>
-              <div className="p-6 rounded-xl bg-zinc-800/50 border border-white/5">
-                <p className="text-sm text-zinc-500 mb-1">Conversion Rate</p>
-                <p className="text-2xl font-bold">19.82%</p>
-                <div className="mt-2 text-xs text-zinc-500">Real-time tracking</div>
+              <div className="p-3 md:p-6 rounded-xl bg-zinc-800/50 border border-white/5">
+                <p className="text-[10px] md:text-sm text-zinc-500 mb-0.5 md:mb-1">Conversion</p>
+                <p className="text-sm md:text-2xl font-bold">19.82%</p>
+                <div className="mt-1 md:mt-2 text-[8px] md:text-xs text-zinc-500">Real-time</div>
               </div>
-              <div className="p-6 rounded-xl bg-zinc-800/50 border border-white/5">
-                <p className="text-sm text-zinc-500 mb-1">Ad Spend</p>
-                <p className="text-2xl font-bold">$12,490</p>
-                <div className="mt-2 text-xs text-rose-500">8% over budget</div>
+              <div className="p-3 md:p-6 rounded-xl bg-zinc-800/50 border border-white/5">
+                <p className="text-[10px] md:text-sm text-zinc-500 mb-0.5 md:mb-1">Ad Spend</p>
+                <p className="text-sm md:text-2xl font-bold">$12,490</p>
+                <div className="mt-1 md:mt-2 text-[8px] md:text-xs text-rose-500">8% over</div>
               </div>
             </div>
-            <div className="mt-8 h-64 rounded-xl bg-zinc-800/30 border border-white/5 flex items-end p-6 gap-2">
+            <div className="mt-4 md:mt-8 h-32 md:h-64 rounded-xl bg-zinc-800/30 border border-white/5 flex items-end p-3 md:p-6 gap-1 md:gap-2">
               {[40, 70, 45, 90, 65, 80, 55, 95, 75, 85, 60, 100].map((h, i) => (
                 <div 
                   key={i} 
