@@ -59,10 +59,10 @@ export default function Home() {
               <div className="absolute -top-[1px] left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#a60724] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
               <div className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#a60724] to-transparent transition-opacity duration-300 group-hover:opacity-0 z-20" />
             </Link>
-            <a href="#features" className="flex flex-col items-center gap-2 text-zinc-400 hover:text-white transition-colors group text-sm">
+            <Link to="/#features" className="flex flex-col items-center gap-2 text-zinc-400 hover:text-white transition-colors group text-sm">
               Learn more
               <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
-            </a>
+            </Link>
           </motion.div>
         </div>
 
