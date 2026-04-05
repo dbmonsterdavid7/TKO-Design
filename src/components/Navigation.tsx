@@ -19,10 +19,13 @@ export function Navigation() {
         ? "bg-zinc-950/80 backdrop-blur-md border-b border-white/5" 
         : "bg-transparent border-b border-transparent"
     }`}>
-      <nav className="flex items-center justify-between px-6 py-3 md:py-4 mx-auto max-w-7xl">
-        <Link to="/" className="flex items-center gap-3">
-          <img src="https://lh3.googleusercontent.com/d/1sho8dWDi-MCebAi3XaxFl6Lrh0VK8ZPj" alt="Takeover Marketing Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" referrerPolicy="no-referrer" />
-          <span className="text-xl font-bold tracking-tight hidden sm:inline">Takeover Marketing</span>
+      <nav className={`flex items-center justify-between px-6 mx-auto max-w-7xl transition-all duration-300 ${
+        isScrolled ? "py-3 md:py-4" : "py-3 md:py-6"
+      }`}>
+        <Link to="/" className="flex items-center">
+          <img src="https://lh3.googleusercontent.com/d/1sho8dWDi-MCebAi3XaxFl6Lrh0VK8ZPj" alt="Takeover Marketing Logo" className={`object-contain transition-all duration-300 ${
+            isScrolled ? "w-10 h-10 md:w-12 md:h-12" : "w-10 h-10 md:w-16 md:h-16"
+          }`} referrerPolicy="no-referrer" />
         </Link>
         
         <div className="flex items-center gap-4 md:gap-8 font-medium text-zinc-400">
