@@ -8,8 +8,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
           <div className="flex flex-wrap items-center gap-6 text-xs text-zinc-500">
             <span>© 2026 Takeover Marketing Inc.</span>
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
             <Link to="/blog" className="hover:text-white transition-colors">Blog</Link>
           </div>
           <div className="flex items-center gap-6">

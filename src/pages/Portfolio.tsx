@@ -4,34 +4,34 @@ import { Footer } from "../components/Footer";
 
 const portfolioItems = [
   {
-    title: "E-commerce Platform",
+    title: "Landscaping",
     category: "Web Development",
-    image: "https://picsum.photos/seed/ecommerce/800/600",
+    image: "https://picsum.photos/seed/landscaping/800/600",
   },
   {
-    title: "SaaS Dashboard",
-    category: "UI/UX Design",
-    image: "https://picsum.photos/seed/dashboard/800/600",
-  },
-  {
-    title: "Mobile Banking App",
-    category: "App Development",
-    image: "https://picsum.photos/seed/banking/800/600",
-  },
-  {
-    title: "Real Estate Portal",
+    title: "Roofing",
     category: "Web Development",
-    image: "https://picsum.photos/seed/realestate/800/600",
+    image: "https://picsum.photos/seed/roofing/800/600",
   },
   {
-    title: "Fitness Tracker",
-    category: "Mobile App",
-    image: "https://picsum.photos/seed/fitness/800/600",
+    title: "HVAC",
+    category: "Web Development",
+    image: "https://picsum.photos/seed/hvac/800/600",
   },
   {
-    title: "Corporate Identity",
-    category: "Branding",
-    image: "https://picsum.photos/seed/branding/800/600",
+    title: "Plumbing",
+    category: "Web Development",
+    image: "https://picsum.photos/seed/plumbing/800/600",
+  },
+  {
+    title: "Junk Removal",
+    category: "Web Development",
+    image: "https://picsum.photos/seed/junkremoval/800/600",
+  },
+  {
+    title: "Medical Spa",
+    category: "Web Development",
+    image: "https://picsum.photos/seed/medicalspa/800/600",
   },
 ];
 
