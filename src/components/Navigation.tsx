@@ -3,14 +3,14 @@ import { motion } from "motion/react";
 
 export function Navigation() {
   return (
-    <nav className="relative z-50 flex items-center justify-between px-6 py-2 md:py-4 mx-auto max-w-7xl">
-      <Link to="/" className="flex items-center gap-3">
-        <img src="https://lh3.googleusercontent.com/d/1sho8dWDi-MCebAi3XaxFl6Lrh0VK8ZPj" alt="Takeover Marketing Logo" className="w-6 h-6 md:w-12 md:h-12 object-contain" referrerPolicy="no-referrer" />
-        <span className="text-xl font-bold tracking-tight hidden sm:inline">Takeover Marketing</span>
-        <span className="text-xl font-bold tracking-tight sm:hidden">Takeover</span>
-      </Link>
-      
-      <div className="flex items-center gap-4 md:gap-8 font-medium text-zinc-400">
+    <header className="sticky top-0 z-50 w-full bg-zinc-950/80 backdrop-blur-md border-b border-white/5">
+      <nav className="flex items-center justify-between px-6 py-2 md:py-4 mx-auto max-w-7xl">
+        <Link to="/" className="flex items-center gap-3">
+          <img src="https://lh3.googleusercontent.com/d/1sho8dWDi-MCebAi3XaxFl6Lrh0VK8ZPj" alt="Takeover Marketing Logo" className="w-6 h-6 md:w-12 md:h-12 object-contain" referrerPolicy="no-referrer" />
+          <span className="text-xl font-bold tracking-tight hidden sm:inline">Takeover Marketing</span>
+        </Link>
+        
+        <div className="flex items-center gap-4 md:gap-8 font-medium text-zinc-400">
         <Link to="/#features" className="text-xs md:text-sm hover:text-white transition-colors">Features</Link>
         <Link to="/pricing" className="text-xs md:text-sm hover:text-white transition-colors">Pricing</Link>
         <Link to="/#testimonials" className="hidden md:block text-sm hover:text-white transition-colors">Testimonials</Link>
@@ -22,5 +22,6 @@ export function Navigation() {
         </Link>
       </div>
     </nav>
+  </header>
   );
 }
