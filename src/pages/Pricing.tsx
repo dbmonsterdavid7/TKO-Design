@@ -195,7 +195,7 @@ export default function Pricing() {
                     <Link to="/contact" className="py-4 rounded-xl font-bold transition-all text-center bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm">
                       Learn More
                     </Link>
-                    <Link to="/contact" className={`py-4 rounded-xl font-bold transition-all text-center text-sm ${
+                    <Link to="/purchase-website" className={`py-4 rounded-xl font-bold transition-all text-center text-sm ${
                       plan.highlight
                         ? "bg-[#a60724] hover:bg-[#8a061e] text-white shadow-[0_4px_20px_-4px_rgba(166,7,36,0.5)]"
                         : "bg-white text-black hover:bg-zinc-200"
