@@ -1,55 +1,89 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
 import { Check, Zap } from "lucide-react";
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 
-const plans = [
-  {
-    name: "Website + Automations",
-    price: "269",
-    period: "/month",
-    description: "Perfect for businesses looking to establish their presence and close more clients.",
-    features: [
-      "High-Performance Website",
-      "On-Site SEO Optimization",
-      "One Click 5 Star Google Review Funnel",
-      "On-Site Booking Calendar",
-      "Missed Call Text Back",
-      "Automated Lead Capture Integration",
-      "Live Lead Tracking App"
-    ],
-    highlight: false
+const pricingData = {
+  automation: {
+    monthly: {
+      name: "Website + Automations",
+      price: "269",
+      period: "/month",
+      description: "Perfect for businesses looking to establish their presence and close more clients.",
+      features: [
+        "High-Performance Website",
+        "On-Site SEO Optimization",
+        "One Click 5 Star Google Review Funnel",
+        "On-Site Booking Calendar",
+        "Missed Call Text Back",
+        "Automated Lead Capture Integration",
+        "Live Lead Tracking App"
+      ],
+      highlight: false
+    },
+    annually: {
+      name: "Website + Automations",
+      price: "3,000",
+      period: "/year",
+      breakdown: "($200 /mo)",
+      description: "The ultimate package for businesses ready to scale aggressively.",
+      features: [
+        "15 Months total (3 Months Free)",
+        "High-Performance Website",
+        "On-Site SEO Optimization",
+        "One Click 5 Star Google Review Funnel",
+        "On-Site Booking Calendar",
+        "Missed Call Text Back",
+        "Automated Lead Capture Integration",
+        "Live Lead Tracking App"
+      ],
+      highlight: true
+    }
   },
-  {
-    name: "Annually",
-    price: "3,000",
-    period: "/year",
-    breakdown: "($200 /mo)",
-    description: "The ultimate package for businesses ready to scale aggressively.",
-    features: [
-      "15 Months total (3 Months free)",
-      "Everything in Website + Automations"
-    ],
-    highlight: true
-  },
-  {
-    name: "Website",
-    price: "97",
-    period: "/month",
-    breakdown: "+ 1 time $300 setup fee",
-    description: "Best for new or small businesses to get your company online.",
-    features: [
-      "High-Performance Website",
-      "On-Site SEO Optimization",
-      "On-Site Booking Calendar",
-      "24/7 Support"
-    ],
-    highlight: false
+  website: {
+    monthly: {
+      name: "Website",
+      price: "97",
+      period: "/month",
+      breakdown: "+ 1 time $300 setup fee",
+      description: "Best for new or small businesses to get your company online.",
+      features: [
+        "High-Performance Website",
+        "On-Site SEO Optimization",
+        "On-Site Booking Calendar",
+        "24/7 Support"
+      ],
+      highlight: false
+    },
+    annually: {
+      name: "Website",
+      price: "1,000",
+      period: "/year",
+      breakdown: "+ 1 time $200 setup fee",
+      description: "Best for new or small businesses to get your company online.",
+      features: [
+        "15 Months total (3 Months Free)",
+        "Save $100 on Setup Fee",
+        "High-Performance Website",
+        "On-Site SEO Optimization",
+        "On-Site Booking Calendar",
+        "24/7 Support"
+      ],
+      highlight: false
+    }
   }
-];
+};
 
 export default function Pricing() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annually'>('monthly');
+
+  const currentPlans = [
+    pricingData.automation[billingCycle],
+    pricingData.website[billingCycle]
+  ];
+
   return (
     <>
       <Navigation />
@@ -68,69 +102,105 @@ export default function Pricing() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 pb-2 bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">
               Simple, transparent pricing for every stage.
             </h1>
-            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+            <p className="text-lg text-zinc-400 max-w-2xl mx-auto mb-12">
               Choose the plan that fits your business goals. No hidden fees, no complex contracts. Just growth.
             </p>
+
+            {/* Toggle Button */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <span className={`text-sm font-medium transition-colors ${billingCycle === 'monthly' ? 'text-white' : 'text-zinc-500'}`}>Monthly</span>
+              <button 
+                onClick={() => setBillingCycle(prev => prev === 'monthly' ? 'annually' : 'monthly')}
+                className={`relative w-14 h-7 rounded-full bg-zinc-900 border px-1 flex items-center transition-all duration-300 ${
+                  billingCycle === 'annually' 
+                    ? 'border-emerald-500/50 shadow-[0_0_15px_rgba(16,185,129,0.5)]' 
+                    : 'border-white/10'
+                }`}
+              >
+                <motion.div 
+                  animate={{ x: billingCycle === 'monthly' ? 0 : 28 }}
+                  className={`w-5 h-5 rounded-full shadow-lg transition-colors duration-300 ${
+                    billingCycle === 'monthly' ? 'bg-white' : 'bg-emerald-500'
+                  }`}
+                />
+              </button>
+              <span className={`text-sm font-medium transition-colors ${billingCycle === 'annually' ? 'text-emerald-500' : 'text-zinc-500'}`}>
+                Annually <span className="text-emerald-500 text-[10px] font-bold ml-1 px-1.5 py-0.5 rounded bg-emerald-500/10">SAVE 25%</span>
+              </span>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Section 2: Pricing Cards */}
       <section className="relative z-10 pb-32 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
-              <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative p-8 rounded-3xl border ${
-                  plan.highlight 
-                    ? "bg-zinc-900/60 border-[#a60724]/50 shadow-[0_0_40px_-10px_rgba(166,7,36,0.3)]" 
-                    : "bg-zinc-900/40 border-white/10"
-                } backdrop-blur-sm flex flex-col`}
-              >
-                {plan.highlight && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#a60724] text-white text-xs font-bold rounded-full uppercase tracking-widest">
-                    Most Popular
-                  </div>
-                )}
-                
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <p className="text-zinc-400 text-sm">{plan.description}</p>
-                </div>
-
-                <div className="mb-8 flex items-baseline gap-1">
-                  {plan.price !== "Custom" && <span className="text-4xl font-bold">$</span>}
-                  <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-zinc-500 text-sm">{plan.period}</span>
-                  {plan.breakdown && (
-                    <span className="text-zinc-500 text-xs ml-1">{plan.breakdown}</span>
-                  )}
-                </div>
-
-                <div className="space-y-4 mb-10 flex-1">
-                  {plan.features.map((feature) => (
-                    <div key={feature} className="flex items-start gap-3 text-sm text-zinc-300">
-                      <Check className={`w-5 h-5 shrink-0 ${feature.includes("3 Months free") ? "text-emerald-500" : "text-[#a60724]"}`} />
-                      <span className={feature.includes("3 Months free") ? "text-emerald-500 font-semibold" : ""}>
-                        {feature}
-                      </span>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatePresence mode="wait">
+              {currentPlans.map((plan, index) => (
+                <motion.div
+                  key={`${plan.name}-${billingCycle}-${index}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className={`relative p-8 rounded-3xl border ${
+                    plan.highlight 
+                      ? "bg-zinc-900/60 border-[#a60724]/50 shadow-[0_0_40px_-10px_rgba(166,7,36,0.3)]" 
+                      : "bg-zinc-900/40 border-white/10"
+                  } backdrop-blur-sm flex flex-col`}
+                >
+                  {plan.highlight && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#a60724] text-white text-xs font-bold rounded-full uppercase tracking-widest">
+                      Most Popular
                     </div>
-                  ))}
-                </div>
+                  )}
+                  
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                    <p className="text-zinc-400 text-sm">{plan.description}</p>
+                  </div>
 
-                <Link to="/contact" className={`w-full py-4 rounded-xl font-bold transition-all text-center ${
-                  plan.highlight
-                    ? "bg-[#a60724] hover:bg-[#8a061e] text-white shadow-[0_4px_20px_-4px_rgba(166,7,36,0.5)]"
-                    : "bg-white/5 hover:bg-white/10 border border-white/10 text-white"
-                }`}>
-                  Get Started
-                </Link>
-              </motion.div>
-            ))}
+                  <div className="mb-8 flex items-baseline gap-1">
+                    {plan.price !== "Custom" && <span className="text-4xl font-bold">$</span>}
+                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-zinc-500 text-sm">{plan.period}</span>
+                    {plan.breakdown && (
+                      <span className="text-zinc-500 text-xs ml-1">{plan.breakdown}</span>
+                    )}
+                  </div>
+
+                  <div className="space-y-4 mb-10 flex-1">
+                    {plan.features.map((feature) => (
+                      <div key={feature} className="flex items-start gap-3 text-sm text-zinc-300">
+                        <Check className={`w-5 h-5 shrink-0 ${
+                          feature.toLowerCase().includes("3 months free") || 
+                          feature.toLowerCase().includes("save $100 on setup fee") 
+                            ? "text-emerald-500" 
+                            : "text-[#a60724]"
+                        }`} />
+                        <span className={
+                          feature.toLowerCase().includes("3 months free") || 
+                          feature.toLowerCase().includes("save $100 on setup fee") 
+                            ? "text-emerald-500 font-semibold" 
+                            : ""
+                        }>
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link to="/contact" className={`w-full py-4 rounded-xl font-bold transition-all text-center ${
+                    plan.highlight
+                      ? "bg-[#a60724] hover:bg-[#8a061e] text-white shadow-[0_4px_20px_-4px_rgba(166,7,36,0.5)]"
+                      : "bg-white/5 hover:bg-white/10 border border-white/10 text-white"
+                  }`}>
+                    Get Started
+                  </Link>
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
 
           <motion.div
