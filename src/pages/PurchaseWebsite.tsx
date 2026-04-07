@@ -50,7 +50,7 @@ export default function PurchaseWebsite() {
               </div>
               <div>
                 <h3 className="font-bold mb-1">Instant Setup</h3>
-                <p className="text-sm text-zinc-400">We start work within 24 hours. Your website typically goes live in 24-72 hours after payment.</p>
+                <p className="text-sm text-zinc-400">Your website typically goes live in 24-72 hours after payment.</p>
               </div>
             </motion.div>
 
