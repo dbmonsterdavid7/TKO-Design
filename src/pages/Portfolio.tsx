@@ -13,49 +13,52 @@ interface PortfolioItem {
 const portfolioItems: PortfolioItem[] = [
   {
     title: "Landscaping",
-    category: "Web Development",
+    category: "Website Design",
     images: [
-      "https://picsum.photos/seed/landscaping/1200/800",
-      "https://picsum.photos/seed/garden/1200/800",
-      "https://picsum.photos/seed/patio/1200/800",
+      "https://lh3.googleusercontent.com/d/1qcD3fgGkjpMhEfFBHBSAwwseigN3CO6b",
+      "https://lh3.googleusercontent.com/d/1G3WqGsKS-yYnKpZodgL8liVcC8DOTyM3",
+      "https://lh3.googleusercontent.com/d/13c3jOXZSxde9IacBmLLrecOTC7jRNoWW",
+      "https://lh3.googleusercontent.com/d/1IYE_yyEQiYrxBn5s_SWOkB5R7nKMsiou",
     ],
   },
   {
     title: "Roofing",
-    category: "Web Development",
+    category: "Website Design",
     images: [
-      "https://picsum.photos/seed/roofing/1200/800",
-      "https://picsum.photos/seed/tiles/1200/800",
+      "https://lh3.googleusercontent.com/d/1DCCkfvJaX281IPqgoZBo7vTtOH_57AfR",
+      "https://lh3.googleusercontent.com/d/1lY_wzl_2MX55DWXF08fFx9iBOHfXjNnd",
+      "https://lh3.googleusercontent.com/d/1Cndn__p1D_tHPlQRPpulbCEc-MZpUHHb",
     ],
   },
   {
     title: "HVAC",
-    category: "Web Development",
+    category: "Website Design",
     images: [
       "https://lh3.googleusercontent.com/d/1_4yaMPS4cMoV1xLD8KIjThD-IXraNnwM",
-      "https://lh3.googleusercontent.com/d/1OVtZ8zz-Oy7Glz9WKvAb3_1yNAxYz5wG",
-      "https://lh3.googleusercontent.com/d/1WCDuYAG_WjGF2LjdbbWN5wfiS0lesXMs",
+      "https://lh3.googleusercontent.com/d/1BNj_UF4py-wBHvu5DJPRptrn6vYBmxQf",
+      "https://lh3.googleusercontent.com/d/1s23hCM1vlnJE6bkDXKCq8fj7Z5jTvpds",
     ],
   },
   {
     title: "Plumbing",
-    category: "Web Development",
+    category: "Website Design",
     images: [
       "https://lh3.googleusercontent.com/d/1GrcBZooR-prPuYFZ9zwXcau66jpullv7",
-      "https://picsum.photos/seed/pipes/1200/800",
+      "https://lh3.googleusercontent.com/d/1q-9DdLdtGgPlw7MhsFmw-DxJ0TfyPzqH",
     ],
   },
   {
     title: "Junk Removal",
-    category: "Web Development",
+    category: "Landing Page Design",
     images: [
-      "https://picsum.photos/seed/junkremoval/1200/800",
-      "https://picsum.photos/seed/truck/1200/800",
+      "https://lh3.googleusercontent.com/d/1jPAK25YORBv6bk8uf6QSr9hJkluDDclN",
+      "https://lh3.googleusercontent.com/d/1h5BgwtfRJNzoyJZ5PcvuevrRC1BSMMte",
+      "https://lh3.googleusercontent.com/d/1bwEP1SG8WdR4pr7Bp6W8crj8yxUqEqNG",
     ],
   },
   {
     title: "Medical Spa",
-    category: "Web Development",
+    category: "Website Design",
     images: [
       "https://picsum.photos/seed/medicalspa/1200/800",
       "https://picsum.photos/seed/skincare/1200/800",

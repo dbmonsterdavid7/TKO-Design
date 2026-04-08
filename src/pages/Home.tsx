@@ -303,33 +303,43 @@ export default function Home() {
               <h2 className="text-h2 mb-8 bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">Trusted by the next generation of founders</h2>
               <div className="space-y-8">
                 <div className="p-6 rounded-2xl bg-zinc-900/50 border border-white/10">
-                  <p className="text-lg italic text-zinc-300 mb-4">\"Takeover Marketing has completely transformed how we handle our growth. It's the first time I've actually enjoyed looking at our conversion metrics.\"</p>
+                  <p className="text-lg italic text-zinc-300 mb-4">"We couldn't be happier with the website Takeover Marketing built our landscaping business. After trying a couple of local agencies in the past, it was clear these guys actually understand the industry. We're excited to keep working with them in the future."</p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-zinc-800" />
+                    <img 
+                      src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
+                      alt="Google Logo" 
+                      className="w-12 h-12 rounded-full bg-white p-2.5 border border-white/10" 
+                      referrerPolicy="no-referrer" 
+                    />
                     <div>
-                      <p className="font-semibold">Sarah Jenkins</p>
-                      <p className="text-sm text-zinc-500">Founder @ TechFlow</p>
+                      <p className="font-semibold">David Thompson</p>
+                      <p className="text-sm text-zinc-500">Owner @ Thompson Landscaping</p>
                     </div>
                   </div>
                 </div>
                 <div className="p-6 rounded-2xl bg-zinc-900/50 border border-white/10">
-                  <p className="text-lg italic text-zinc-300 mb-4">\"The AI insights are a game changer. It caught a subscription leak that saved us $2k a month.\"</p>
+                  <p className="text-lg italic text-zinc-300 mb-4">"The missed call text back system has helped me close so many customers that we would have missed in the past, it follows up with them while I'm busy managing my crews - cant recommend them more."</p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-zinc-800" />
+                    <img 
+                      src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
+                      alt="Google Logo" 
+                      className="w-12 h-12 rounded-full bg-white p-2.5 border border-white/10" 
+                      referrerPolicy="no-referrer" 
+                    />
                     <div>
-                      <p className="font-semibold">Marcus Chen</p>
-                      <p className="text-sm text-zinc-500">CEO @ CreativePulse</p>
+                      <p className="font-semibold">James Miller</p>
+                      <p className="text-sm text-zinc-500">Owner @ Miller Roofing</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative flex justify-center">
               <div className="absolute -inset-4 bg-[#a60724]/20 blur-3xl rounded-full" />
               <img 
                 src="https://picsum.photos/seed/finance-red/800/600" 
                 alt="Testimonial Proof" 
-                className="relative rounded-2xl border border-white/10 shadow-2xl"
+                className="relative rounded-2xl border border-white/10 shadow-2xl max-w-full h-auto"
                 referrerPolicy="no-referrer"
               />
             </div>

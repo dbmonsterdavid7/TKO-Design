@@ -33,7 +33,7 @@ export default function Contact() {
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
               Select a time that works best for you and let's discuss how we can take your business to the next level, or{" "}
               <Link to="/purchase-website" className="text-[#a60724] hover:text-[#8a061e] transition-colors font-medium underline underline-offset-4">
-                skip the line and purchase your website now
+                skip the call and purchase your website now
               </Link>.
             </p>
           </motion.div>

@@ -20,7 +20,7 @@ export default function PurchaseWebsite() {
     <>
       <Navigation />
       
-      <section className="relative z-10 pt-24 pb-32 px-6">
+      <section className="relative z-10 pt-24 pb-32 px-2 md:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <motion.div
@@ -93,7 +93,7 @@ export default function PurchaseWebsite() {
             className="relative max-w-3xl mx-auto"
           >
             <div className="absolute -inset-1 bg-gradient-to-br from-[#a60724]/20 to-transparent rounded-[2rem] blur-2xl opacity-50" />
-            <div className="relative p-8 md:p-10 rounded-[2rem] bg-zinc-900 border border-white/10 shadow-2xl">
+            <div className="relative p-4 md:p-10 rounded-[2rem] bg-zinc-900 border border-white/10 shadow-2xl">
               <div className="mb-8 text-center">
                 <h2 className="text-2xl font-bold mb-2">Order Details</h2>
                 <p className="text-zinc-400 text-sm">Please provide your information below.</p>
