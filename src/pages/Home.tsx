@@ -328,7 +328,7 @@ export default function Home() {
                     />
                     <div>
                       <p className="font-semibold">Daniel Layher</p>
-                      <p className="text-sm text-zinc-500">Owner @ Layher Roofing</p>
+                      <p className="text-sm text-zinc-500">Owner @ Layher Landscape Professionals</p>
                     </div>
                   </div>
                 </div>
