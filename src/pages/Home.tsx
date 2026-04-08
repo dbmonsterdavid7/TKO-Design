@@ -303,7 +303,7 @@ export default function Home() {
               <h2 className="text-h2 mb-8 bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">Trusted by the next generation of founders</h2>
               <div className="space-y-8">
                 <div className="p-6 rounded-2xl bg-zinc-900/50 border border-white/10">
-                  <p className="text-lg italic text-zinc-300 mb-4">"We couldn't be happier with the website Takeover Marketing built our landscaping business. After trying a couple of local agencies in the past, it was clear these guys actually understand the industry. We're excited to keep working with them in the future."</p>
+                  <p className="text-lg italic text-zinc-300 mb-4">"We couldn't be happier with the website Takeover Marketing built our roofing business. After trying a couple of local agencies in the past, it was clear these guys actually understand the industry. We're excited to keep working with them in the future."</p>
                   <div className="flex items-center gap-4">
                     <img 
                       src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
@@ -313,7 +313,7 @@ export default function Home() {
                     />
                     <div>
                       <p className="font-semibold">David Thompson</p>
-                      <p className="text-sm text-zinc-500">Owner @ Thompson Landscaping</p>
+                      <p className="text-sm text-zinc-500">Owner @ Advantage Roofing</p>
                     </div>
                   </div>
                 </div>
@@ -327,8 +327,8 @@ export default function Home() {
                       referrerPolicy="no-referrer" 
                     />
                     <div>
-                      <p className="font-semibold">James Miller</p>
-                      <p className="text-sm text-zinc-500">Owner @ Miller Roofing</p>
+                      <p className="font-semibold">Daniel Layher</p>
+                      <p className="text-sm text-zinc-500">Owner @ Layher Roofing</p>
                     </div>
                   </div>
                 </div>
