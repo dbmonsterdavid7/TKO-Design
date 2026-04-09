@@ -22,7 +22,7 @@ export function Navigation() {
       <nav className={`flex items-center justify-between px-6 mx-auto max-w-7xl transition-all duration-300 ${
         isScrolled ? "py-3 md:py-4" : "py-3 md:py-6"
       }`}>
-        <Link to="/" className="flex items-center">
+        <Link to="/" className={`flex items-center transition-all duration-300 ${!isScrolled ? "-ml-2 md:ml-0" : ""}`}>
           <img src="https://lh3.googleusercontent.com/d/1sho8dWDi-MCebAi3XaxFl6Lrh0VK8ZPj" alt="Takeover Marketing Logo" className={`object-contain transition-all duration-300 ${
             isScrolled ? "w-12 h-12 md:w-12 md:h-12" : "w-14 h-14 md:w-16 md:h-16"
           }`} referrerPolicy="no-referrer" />
