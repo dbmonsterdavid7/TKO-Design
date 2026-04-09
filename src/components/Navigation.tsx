@@ -24,7 +24,7 @@ export function Navigation() {
       }`}>
         <Link to="/" className="flex items-center">
           <img src="https://lh3.googleusercontent.com/d/1sho8dWDi-MCebAi3XaxFl6Lrh0VK8ZPj" alt="Takeover Marketing Logo" className={`object-contain transition-all duration-300 ${
-            isScrolled ? "w-10 h-10 md:w-12 md:h-12" : "w-10 h-10 md:w-16 md:h-16"
+            isScrolled ? "w-12 h-12 md:w-12 md:h-12" : "w-14 h-14 md:w-16 md:h-16"
           }`} referrerPolicy="no-referrer" />
         </Link>
         
