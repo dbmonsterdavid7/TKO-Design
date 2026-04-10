@@ -229,13 +229,16 @@ export default function Home() {
                   Stop waiting for customers to find you. We deploy high-converting Meta and Google ad campaigns that put your brand directly in front of your ideal clients.
                 </p>
                 
-                <div className="bg-gradient-to-br from-[#a60724]/30 to-zinc-900 h-80 sm:h-[450px] rounded-3xl relative overflow-hidden mb-8 border border-white/10 group">
-                  <img 
-                    src="https://picsum.photos/seed/advertising-hero/1200/800" 
-                    alt="Advertising Analytics Showcase" 
-                    className="absolute top-12 left-12 rounded-xl shadow-2xl w-[110%] max-w-none border border-white/5 transition-transform duration-700 group-hover:scale-[1.02]"
-                    referrerPolicy="no-referrer"
-                  />
+                <div className="bg-gradient-to-br from-[#a60724]/30 to-zinc-900 h-80 sm:h-[450px] rounded-3xl relative overflow-hidden mb-8 border border-white/10 group flex items-center justify-center p-4 sm:p-8">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(166,7,36,0.1),transparent)] group-hover:opacity-100 transition-opacity" />
+                  <div className="relative">
+                    <img 
+                      src="https://lh3.googleusercontent.com/d/1IMB3M4n-wz5ZqlGyUMWqO37DYAxzPdye" 
+                      alt="Advertising Analytics Showcase" 
+                      className="rounded-xl shadow-2xl max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -337,9 +340,9 @@ export default function Home() {
             <div className="relative flex justify-center">
               <div className="absolute -inset-4 bg-[#a60724]/20 blur-3xl rounded-full" />
               <img 
-                src="https://picsum.photos/seed/finance-red/800/600" 
+                src="https://lh3.googleusercontent.com/d/1sho8dWDi-MCebAi3XaxFl6Lrh0VK8ZPj" 
                 alt="Testimonial Proof" 
-                className="relative rounded-2xl border border-white/10 shadow-2xl max-w-full h-auto"
+                className="relative max-w-full h-auto"
                 referrerPolicy="no-referrer"
               />
             </div>
