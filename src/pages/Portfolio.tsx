@@ -60,8 +60,9 @@ const portfolioItems: PortfolioItem[] = [
     title: "Medical Spa",
     category: "Website Design",
     images: [
-      "https://picsum.photos/seed/medicalspa/1200/800",
-      "https://picsum.photos/seed/skincare/1200/800",
+      "https://lh3.googleusercontent.com/d/1INmfnVMMTaT0tm5632FZRLy0g5sK0KJB",
+      "https://lh3.googleusercontent.com/d/1et9eAVcKgoPZ4W6hgaEuwbAZDMudNPTl",
+      "https://lh3.googleusercontent.com/d/1FS6mgnqat_-fVVZmZcv-cTKrrjTgsAci",
     ],
   },
 ];

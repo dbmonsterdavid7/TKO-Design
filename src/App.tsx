@@ -7,6 +7,7 @@ import Portfolio from "./pages/Portfolio";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import PurchaseWebsite from "./pages/PurchaseWebsite";
+import FAQ from "./pages/FAQ";
 import { ParticleBackground } from "./components/ParticleBackground";
 
 function ScrollToTop() {
@@ -65,6 +66,7 @@ export default function App() {
           <Route path="/terms" element={<TermsOfUse />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
           <Route path="/purchase-website" element={<PurchaseWebsite />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </div>
     </Router>

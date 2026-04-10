@@ -45,7 +45,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-body text-zinc-400 mb-12 max-w-2xl mx-auto"
           >
-            Premium website and marketing solutions for all service-based businesses. From contractors to medical spas, we empower every business owner to scale their brand with simple, intuitive tools.
+            We provide premium website and marketing solutions for all service-based businesses. From contractors to medical spas, we empower every business owner to scale their brand with simple, intuitive tools.
           </motion.p>
 
           <motion.div 
@@ -135,12 +135,12 @@ export default function Home() {
                   First impressions matter. We build websites that establish your brand and automate your growth, ensuring a seamless experience from the first click to the final booking.
                 </p>
                 
-                <div className="bg-gradient-to-br from-[#a60724]/30 to-zinc-900 h-80 sm:h-[450px] rounded-3xl relative overflow-hidden mb-8 border border-white/10 group">
+                <div className="bg-gradient-to-br from-[#a60724]/30 to-zinc-900 h-80 sm:h-[450px] rounded-3xl relative overflow-hidden mb-8 border border-white/10 group flex items-center justify-center p-4 sm:p-8">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(166,7,36,0.1),transparent)] group-hover:opacity-100 transition-opacity" />
                   <img 
-                    src="https://picsum.photos/seed/website-design/1200/800" 
+                    src="https://lh3.googleusercontent.com/d/1AZTR5Ue_6yOrjyWZDc5xnjYbQP4k6uNm" 
                     alt="Website Design Showcase" 
-                    className="absolute top-12 left-12 rounded-xl shadow-2xl w-[110%] max-w-none border border-white/5 transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="relative rounded-xl shadow-2xl max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                     referrerPolicy="no-referrer"
                   />
                 </div>
