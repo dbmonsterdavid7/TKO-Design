@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { X, Linkedin, Facebook } from "lucide-react";
+import { X, Linkedin, Facebook, Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,9 +8,15 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
           <div className="flex flex-col gap-4">
             <h4 className="text-sm font-bold uppercase tracking-widest text-[#a60724]">Contact Us</h4>
-            <div className="flex flex-col gap-2 text-sm text-zinc-400">
-              <a href="mailto:contact@tkovermarketing.com" className="hover:text-white transition-colors">contact@tkovermarketing.com</a>
-              <a href="tel:7348658775" className="hover:text-white transition-colors">734-865-8775</a>
+            <div className="flex flex-col gap-3 text-sm text-zinc-400">
+              <a href="mailto:contact@tkovermarketing.com" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Mail className="w-4 h-4 text-[#a60724]" />
+                contact@tkovermarketing.com
+              </a>
+              <a href="tel:7348658775" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Phone className="w-4 h-4 text-[#a60724]" />
+                734-865-8775
+              </a>
             </div>
           </div>
           <div className="flex items-center gap-6 pt-2 md:pt-0">
