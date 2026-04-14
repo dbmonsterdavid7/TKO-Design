@@ -281,7 +281,6 @@ export default function PrivacyPolicy() {
                 <li><a href="#disclosure">Disclosure</a></li>
                 <li><a href="#security">Security</a></li>
                 <li><a href="#children">Children</a></li>
-                <li><a href="#links">External Links</a></li>
                 <li><a href="#changes">Policy Changes</a></li>
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
@@ -327,7 +326,7 @@ export default function PrivacyPolicy() {
               {/* Data Collected */}
               <div className="section" id="data-collected">
                 <h2>Collecting Your Data</h2>
-                <p>The Company may collect Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
+                <p>We collect several different types of information for various purposes to provide and improve Our Service to You.</p>
                 <p>While using Our Service, We may ask You to provide personally identifiable information that can be used to contact or identify You. This may include, but is not limited to:</p>
                 <ul>
                   <li>First name and last name</li>
@@ -345,6 +344,15 @@ export default function PrivacyPolicy() {
                 <h2>Opt-In &amp; Contact</h2>
                 <div className="highlight-card">
                   <p>By providing Your first and last name, email address, and phone number, and opting in to receive communications from Us, You consent to being contacted by the Company using the information You have provided. We may use this information to reach out to You by email, phone call, or SMS regarding Our services, offers, updates, and other relevant communications.</p>
+                  
+                  <h3 className="mt-6 mb-2 text-white font-medium uppercase text-[10px] tracking-widest">SMS/Text Message Program</h3>
+                  <p className="text-sm">Users opt-in to Our SMS program by providing their mobile number through Our contact forms or during the purchase process. By opting in, You agree to receive text messages related to Your inquiries, orders, and marketing updates.</p>
+                  <ul className="mt-2">
+                    <li><strong>Message Frequency:</strong> Message frequency varies based on Your interaction with Our Service.</li>
+                    <li><strong>Opt-Out:</strong> You can cancel the SMS service at any time. Just text "STOP" to the short code or number from which You received the message. After You send the SMS message "STOP" to Us, We will send You an SMS message to confirm that You have been unsubscribed.</li>
+                    <li><strong>Help:</strong> For help, You can reply with the keyword "HELP" or contact Us directly at <a href="mailto:contact@tkovermarketing.com" className="text-[#A60724] underline">contact@tkovermarketing.com</a>.</li>
+                  </ul>
+                  
                   <p className="mt-4 font-medium text-white">No mobile information or personal data will be shared with third parties or affiliates for any purpose. We maintain a strict policy against sharing, selling, or renting Your data to any third party.</p>
                 </div>
               </div>
@@ -379,7 +387,7 @@ export default function PrivacyPolicy() {
               {/* Use of Data */}
               <div className="section" id="use">
                 <h2>Use of Your Data</h2>
-                <p>The Company may use Personal Data for the following purposes (subject to the mobile and text messaging exceptions below):</p>
+                <p>The Company uses the collected data for various purposes:</p>
                 <ul>
                   <li><strong>To provide and maintain our Service</strong>, including monitoring usage.</li>
                   <li><strong>To manage Your Account</strong> and its associated functionalities.</li>
@@ -397,7 +405,7 @@ export default function PrivacyPolicy() {
               {/* Retention */}
               <div className="section" id="retention">
                 <h2>Data Retention</h2>
-                <p>The Company may retain Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
+                <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy:</p>
                 <table className="data-table">
                   <thead><tr><th>Category</th><th>Retention Period</th></tr></thead>
                   <tbody>
@@ -420,8 +428,15 @@ export default function PrivacyPolicy() {
               {/* Delete / Rights */}
               <div className="section" id="delete">
                 <h2>Your Rights</h2>
-                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
-                <p>Please note that We may need to retain certain information when We have a legal obligation or lawful basis to do so.</p>
+                <p>You have the following rights regarding Your Personal Data:</p>
+                <ul>
+                  <li><strong>Access:</strong> You have the right to request a copy of the Personal Data We hold about You.</li>
+                  <li><strong>Update:</strong> You have the right to request that We correct or update any inaccurate or incomplete Personal Data.</li>
+                  <li><strong>Delete:</strong> You have the right to request that We delete Your Personal Data, subject to certain legal obligations.</li>
+                  <li><strong>Unsubscribe:</strong> You have the right to opt-out of marketing communications at any time by using the "unsubscribe" link in emails or texting "STOP" to SMS messages.</li>
+                </ul>
+                <p>To exercise any of these rights, please contact Us at <a href="mailto:contact@tkovermarketing.com" className="text-[#A60724] underline">contact@tkovermarketing.com</a>. We will respond to Your request within a reasonable timeframe.</p>
+                <p className="mt-4 text-xs italic">Please note that We may need to retain certain information when We have a legal obligation or lawful basis to do so.</p>
               </div>
 
               {/* Disclosure */}
@@ -433,32 +448,33 @@ export default function PrivacyPolicy() {
               {/* Security */}
               <div className="section" id="security">
                 <h2>Security</h2>
-                <p>The Company may secure Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
+                <p>The security of Your Personal Data is important to Us. We implement a variety of security measures to maintain the safety of Your personal information:</p>
+                <ul>
+                  <li><strong>Encryption:</strong> We use industry-standard SSL/TLS encryption to protect data transmitted to and from Our Website.</li>
+                  <li><strong>Secure Storage:</strong> Personal Data is stored on secure servers with restricted access.</li>
+                  <li><strong>Access Controls:</strong> Access to Your Personal Data is limited to authorized employees who need the information to perform their jobs.</li>
+                  <li><strong>Regular Audits:</strong> We periodically review Our security practices to ensure the ongoing protection of Your data.</li>
+                </ul>
+                <p>While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security. No method of transmission over the Internet or method of electronic storage is 100% secure.</p>
               </div>
 
               {/* Children */}
               <div className="section" id="children">
                 <h2>Children's Privacy</h2>
-                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
-              </div>
-
-              {/* Links */}
-              <div className="section" id="links">
-                <h2>External Links</h2>
-                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
+                <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us.</p>
               </div>
 
               {/* Changes */}
               <div className="section" id="changes">
                 <h2>Policy Changes</h2>
-                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
+                <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
                 <p>You are advised to review this Privacy Policy periodically. Changes are effective when posted.</p>
               </div>
 
               {/* Contact */}
               <div className="section" id="contact">
                 <h2>Contact Us</h2>
-                <p>The Company may process Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
+                <p>If You have any questions about this Privacy Policy, You can contact Us:</p>
                 <div className="highlight-card">
                   <p>By email: <a href="mailto:contact@tkovermarketing.com" className="text-[#A60724] underline">contact@tkovermarketing.com</a></p>
                 </div>
