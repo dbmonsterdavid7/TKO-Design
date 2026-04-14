@@ -27,51 +27,10 @@ function ScrollToTop() {
   return null;
 }
 
-function ChatWidget() {
-  const location = useLocation();
-  const excludedPaths = ["/contact", "/purchase-website"];
-  const isExcluded = excludedPaths.includes(location.pathname);
-
-  useEffect(() => {
-    if (isExcluded) {
-      // Remove the script if we are on an excluded page
-      const existingScript = document.querySelector('script[src*="widgets.leadconnectorhq.com/loader.js"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-      // Also remove the widget container if it exists (LeadConnector often adds a div)
-      const widgetContainer = document.getElementById('lc-chat-widget-container');
-      if (widgetContainer) {
-        widgetContainer.remove();
-      }
-      return;
-    }
-
-    // Add the script if we are not on an excluded page and it doesn't already exist
-    const existingScript = document.querySelector('script[src*="widgets.leadconnectorhq.com/loader.js"]');
-    if (!existingScript) {
-      const script = document.createElement("script");
-      script.src = "https://widgets.leadconnectorhq.com/loader.js";
-      script.dataset.resourcesUrl = "https://widgets.leadconnectorhq.com/chat-widget/loader.js";
-      script.dataset.widgetId = "69d9a9629f3b6f4a9c3f8b9b";
-      script.async = true;
-      document.head.appendChild(script);
-    }
-
-    return () => {
-      // Cleanup on unmount or route change if needed
-      // However, usually we want it to persist across allowed pages
-    };
-  }, [location.pathname, isExcluded]);
-
-  return null;
-}
-
 export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <ChatWidget />
       <div className="relative min-h-screen bg-zinc-950 text-white selection:bg-[#a60724]/30">
         <ParticleBackground />
 
