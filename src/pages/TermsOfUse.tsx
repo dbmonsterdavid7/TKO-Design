@@ -21,8 +21,33 @@ export default function TermsOfUse() {
 
     sections.forEach(s => observer.observe(s));
 
+    // Smooth scroll for sidebar links
+    const handleNavClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+        e.preventDefault();
+        const id = target.getAttribute('href')?.slice(1);
+        const element = document.getElementById(id!);
+        if (element) {
+          const offset = 100; // Offset for sticky header
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleNavClick);
+
     return () => {
       sections.forEach(s => observer.unobserve(s));
+      document.removeEventListener('click', handleNavClick);
     };
   }, []);
 
@@ -95,6 +120,10 @@ export default function TermsOfUse() {
         }
 
         nav.sidebar-nav {
+          position: sticky;
+          top: 80px;
+          height: calc(100vh - 80px);
+          overflow-y: auto;
           padding: 2.5rem 2rem 2.5rem 0;
           border-right: 1px solid var(--border);
         }

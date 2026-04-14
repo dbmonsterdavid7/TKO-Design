@@ -21,8 +21,33 @@ export default function PrivacyPolicy() {
 
     sections.forEach(s => observer.observe(s));
 
+    // Smooth scroll for sidebar links
+    const handleNavClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+        e.preventDefault();
+        const id = target.getAttribute('href')?.slice(1);
+        const element = document.getElementById(id!);
+        if (element) {
+          const offset = 100; // Offset for sticky header
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleNavClick);
+
     return () => {
       sections.forEach(s => observer.unobserve(s));
+      document.removeEventListener('click', handleNavClick);
     };
   }, []);
 
@@ -268,7 +293,7 @@ export default function PrivacyPolicy() {
                 <h2>Overview</h2>
                 <p>This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You use the Service, and tells You about Your privacy rights and how the law protects You.</p>
                 <p>We use Your Personal Data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
-                <p className="mt-4 font-medium text-white italic">Text messaging originator opt-in data and consent will not be shared with any third parties, except for aggregators and providers of the Text Message services.</p>
+                <p className="mt-4 font-medium text-white italic">Text messaging originator opt-in data and consent will not be shared with any third parties.</p>
               </div>
 
               {/* Interpretation & Definitions */}
@@ -291,7 +316,7 @@ export default function PrivacyPolicy() {
                     <tr><td>Device</td><td>Any device that can access the Service — computer, cell phone, or digital tablet.</td></tr>
                     <tr><td>Personal Data</td><td>Any information that relates to an identified or identifiable individual. Also called "Personal Information."</td></tr>
                     <tr><td>Service</td><td>The Website.</td></tr>
-                    <tr><td>Service Provider</td><td>Any third-party company or individual employed by the Company to facilitate, provide, or analyze the Service.</td></tr>
+                    <tr><td>Service Provider</td><td>Any individual employed by the Company to facilitate or provide the Service. We do not share data with third-party service providers.</td></tr>
                     <tr><td>Usage Data</td><td>Data collected automatically from the use of the Service or its infrastructure.</td></tr>
                     <tr><td>Website</td><td>Takeover Marketing, accessible at <a href="https://tkovermarketing.com/" target="_blank" className="text-[#A60724] underline">tkovermarketing.com</a></td></tr>
                     <tr><td>You</td><td>The individual accessing or using the Service, or the legal entity on whose behalf that individual acts.</td></tr>
@@ -320,7 +345,7 @@ export default function PrivacyPolicy() {
                 <h2>Opt-In &amp; Contact</h2>
                 <div className="highlight-card">
                   <p>By providing Your first and last name, email address, and phone number, and opting in to receive communications from Us, You consent to being contacted by the Company using the information You have provided. We may use this information to reach out to You by email, phone call, or SMS regarding Our services, offers, updates, and other relevant communications.</p>
-                  <p className="mt-4 font-medium text-white">No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer is permitted. All other use case categories exclude text messaging originator opt-in data and consent, this information will not be shared with any third parties.</p>
+                  <p className="mt-4 font-medium text-white">No mobile information or personal data will be shared with third parties or affiliates for any purpose. We maintain a strict policy against sharing, selling, or renting Your data to any third party.</p>
                 </div>
               </div>
 
@@ -362,12 +387,11 @@ export default function PrivacyPolicy() {
                   <li><strong>To contact You</strong> by email, phone, SMS, or push notification regarding updates, security notices, or service-related communications.</li>
                   <li><strong>To provide news and offers</strong> about goods, services, or events similar to what You have already inquired about, unless You opt out.</li>
                   <li><strong>To manage Your requests</strong> submitted to Us.</li>
-                  <li><strong>For business transfers</strong> — evaluating mergers, acquisitions, or asset sales.</li>
-                  <li><strong>For analytics and improvement</strong> — identifying usage trends and improving our Service, products, and marketing.</li>
+                  <li><strong>For analytics and improvement</strong> — identifying usage trends and improving our Service, products, and marketing internally.</li>
                 </ul>
 
                 <h3>Data Sharing</h3>
-                <p className="mt-4 font-medium text-white italic">No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer is permitted. All other use case categories exclude text messaging originator opt-in data and consent, this information will not be shared with any third parties.</p>
+                <p className="mt-4 font-medium text-white italic">We do not share Your personal data or mobile information with any third parties or affiliates. All information collected is used strictly for internal purposes to provide and improve Our Service.</p>
               </div>
 
               {/* Retention */}
@@ -390,7 +414,7 @@ export default function PrivacyPolicy() {
               {/* Transfer */}
               <div className="section" id="transfer">
                 <h2>Data Transfer</h2>
-                <p>The Company may transfer Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
+                <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. We do not transfer Your Personal Data to third parties.</p>
               </div>
 
               {/* Delete / Rights */}
@@ -403,21 +427,7 @@ export default function PrivacyPolicy() {
               {/* Disclosure */}
               <div className="section" id="disclosure">
                 <h2>Disclosure</h2>
-                <p>The Company may disclose Your Personal Data in these situations (subject to the mobile and text messaging exceptions below):</p>
-                <p>If the Company is involved in a merger, acquisition, or asset sale, Your Personal Data may be transferred. We will provide notice before Your data becomes subject to a different Privacy Policy.</p>
-
-                <h3>Law Enforcement</h3>
-                <p>The Company may disclose Your Personal Data if required by law or in response to valid requests by public authorities.</p>
-
-                <h3>Other Legal Requirements</h3>
-                <p>The Company may disclose Your Personal Data in good faith when necessary to:</p>
-                <ul>
-                  <li>Comply with a legal obligation</li>
-                  <li>Protect and defend the rights or property of the Company</li>
-                  <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
-                  <li>Protect the personal safety of Users or the public</li>
-                  <li>Protect against legal liability</li>
-                </ul>
+                <p>The Company maintains a strict policy of non-disclosure. We do not share, sell, or disclose Your Personal Data to third parties.</p>
               </div>
 
               {/* Security */}
