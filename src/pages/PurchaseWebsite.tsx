@@ -100,7 +100,7 @@ export default function PurchaseWebsite() {
               </div>
 
               {/* Embedded Checkout Form */}
-              <div className="min-h-[800px] w-full rounded-2xl bg-zinc-950/50 overflow-hidden">
+              <div className="min-h-[1000px] w-full rounded-2xl bg-zinc-950/50 overflow-hidden">
                 <iframe
                   src="https://api.leadconnectorhq.com/widget/form/AYO0InESeFvZfF1KOhvf"
                   style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}

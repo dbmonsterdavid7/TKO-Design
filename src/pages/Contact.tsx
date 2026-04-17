@@ -42,7 +42,7 @@ export default function Contact() {
         <div className="flex-1 max-w-6xl mx-auto w-full rounded-3xl border border-white/10 bg-zinc-900/40 backdrop-blur-sm overflow-hidden p-6 md:p-12 flex flex-col items-center justify-center">
            <iframe 
              src="https://api.leadconnectorhq.com/widget/booking/rDuOifW8Jz5xGQO8HZIZ" 
-             style={{ width: "100%", height: "800px", border: "none" }} 
+             style={{ width: "100%", height: "1000px", border: "none" }} 
              scrolling="no" 
              id="rDuOifW8Jz5xGQO8HZIZ_1775538522002"
              title="Booking Calendar"
