@@ -247,7 +247,7 @@ export default function Home() {
                       <Target className="w-6 h-6 text-[#a60724]" />
                     </div>
                     <h4 className="font-semibold text-lg mb-2">Paid Meta & Google Ads</h4>
-                    <p className="text-sm text-zinc-500">Expertly managed campaigns designed to capture high-intent leads across the world's largest platforms.</p>
+                    <p className="text-sm text-zinc-500">Expertly managed campaigns designed to capture high-intent customers across the world's largest platforms.</p>
                   </motion.div>
                   
                   <motion.div whileHover={{ y: -5 }} className="bg-zinc-900/40 border border-white/5 rounded-2xl p-8 flex flex-col items-center text-center backdrop-blur-sm">
