@@ -66,7 +66,7 @@ body {
 
 .particle {
   position: absolute;
-  background: white;
+  background: var(--particle-bg, white);
   border-radius: 50%;
   pointer-events: none;
   animation: float linear infinite;

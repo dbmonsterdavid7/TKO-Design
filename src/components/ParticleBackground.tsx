@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface Particle {
   id: number;
@@ -11,6 +12,11 @@ interface Particle {
 
 export const ParticleBackground: React.FC = () => {
   const [particles, setParticles] = useState<Particle[]>([]);
+  const location = useLocation();
+  const hostname = window.location.hostname;
+  const isWellness = location.pathname === '/wellness' || hostname.startsWith('wellness.');
+  const color = isWellness ? 'rgba(167,139,250,0.15)' : 'rgba(166,7,36,0.15)';
+  const particleBg = isWellness ? '#A78BFA' : 'white';
 
   useEffect(() => {
     const newParticles = Array.from({ length: 50 }).map((_, i) => ({
@@ -25,8 +31,8 @@ export const ParticleBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(166,7,36,0.15),transparent_70%)]" />
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0" style={{ '--particle-bg': particleBg } as React.CSSProperties}>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,var(--particle-color),transparent_70%)]" style={{ '--particle-color': color } as React.CSSProperties} />
       {particles.map((p) => (
         <div
           key={p.id}

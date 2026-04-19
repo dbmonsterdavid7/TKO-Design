@@ -1,6 +1,7 @@
 import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./pages/Home";
+import Wellness from "./pages/Wellness";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
@@ -27,48 +28,68 @@ function ScrollToTop() {
   return null;
 }
 
+function AppContent() {
+  const { pathname } = useLocation();
+  const hostname = window.location.hostname;
+  
+  // Detect if we are on the wellness subdomain (e.g., wellness.tkovermarketing.com)
+  const isWellnessSubdomain = hostname.startsWith('wellness.');
+  const isWellness = pathname === '/wellness' || isWellnessSubdomain;
+  
+  const selectionColor = isWellness ? 'selection:bg-[#A78BFA]/30' : 'selection:bg-[#a60724]/30';
+  const themeClasses = isWellness 
+    ? "bg-[#F5F3FF] text-zinc-900" 
+    : "bg-zinc-950 text-white";
+  const gridStroke = isWellness ? "stroke-[#A78BFA]/20" : "stroke-white/5";
+
+  return (
+    <div className={`relative min-h-screen transition-colors duration-500 ${themeClasses} ${selectionColor}`}>
+      <ScrollToTop />
+      <ParticleBackground />
+
+      {/* Global Grid Lines */}
+      <div className="absolute inset-x-0 top-0 h-full pointer-events-none z-0 overflow-hidden">
+        <svg
+          className={`absolute inset-0 h-full w-full ${gridStroke} [mask-image:radial-gradient(100%_70%_at_top_center,white,transparent)]`}
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="hero-grid"
+              width="80"
+              height="80"
+              x="50%"
+              y="-1"
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M.5 200V.5H200" fill="none" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" strokeWidth={0} fill="url(#hero-grid)" />
+        </svg>
+      </div>
+
+      <Routes>
+        <Route path="/" element={isWellnessSubdomain ? <Wellness /> : <Home />} />
+        <Route path="/wellness" element={<Wellness />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfUse />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/purchase-website" element={<PurchaseWebsite />} />
+        <Route path="/faq" element={<FAQ />} />
+      </Routes>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <div className="relative min-h-screen bg-zinc-950 text-white selection:bg-[#a60724]/30">
-        <ParticleBackground />
-
-        {/* Global Grid Lines */}
-        <div className="absolute inset-x-0 top-0 h-full pointer-events-none z-0 overflow-hidden">
-          <svg
-            className="absolute inset-0 h-full w-full stroke-white/5 [mask-image:radial-gradient(100%_70%_at_top_center,white,transparent)]"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="hero-grid"
-                width="80"
-                height="80"
-                x="50%"
-                y="-1"
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" strokeWidth={0} fill="url(#hero-grid)" />
-          </svg>
-        </div>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<TermsOfUse />} />
-          <Route path="/terms-of-use" element={<TermsOfUse />} />
-          <Route path="/purchase-website" element={<PurchaseWebsite />} />
-          <Route path="/faq" element={<FAQ />} />
-        </Routes>
-      </div>
+      <AppContent />
     </Router>
   );
 }
