@@ -63,6 +63,7 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
 
 export default function Wellness() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+  const [isAnnual, setIsAnnual] = useState(false);
   const bookingRef = useRef<HTMLDivElement>(null);
 
   const scrollToBooking = () => {
@@ -326,25 +327,57 @@ export default function Wellness() {
             <div className="absolute top-0 left-0 right-0 h-1 bg-[#A78BFA]" />
             
             <div className="p-6 md:p-10">
+              {/* Billing Toggle */}
+              <div className="flex items-center justify-center gap-4 mb-10">
+                <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${!isAnnual ? "text-[#A78BFA]" : "text-zinc-500"}`}>Monthly</span>
+                <button 
+                  onClick={() => setIsAnnual(!isAnnual)}
+                  className={`w-12 h-6 bg-zinc-800 rounded-full relative flex items-center p-1 transition-all duration-500 border hover:border-zinc-500 ${isAnnual ? "shadow-[0_0_20px_rgba(167,139,250,0.6)] border-[#A78BFA]/50" : "border-zinc-700"}`}
+                >
+                  <div className={`w-4 h-4 bg-[#A78BFA] rounded-full transition-all duration-300 shadow-[0_0_10px_rgba(167,139,250,0.3)] ${isAnnual ? "translate-x-6" : "translate-x-0"}`} />
+                </button>
+                <div className="flex items-center gap-2">
+                  <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${isAnnual ? "text-[#A78BFA]" : "text-zinc-500"}`}>Annual</span>
+                  <span className="bg-[#A78BFA] text-zinc-900 text-[10px] font-black px-2 py-0.5 rounded shadow-[0_0_15px_rgba(167,139,250,0.4)] animate-pulse">SAVE 25%</span>
+                </div>
+              </div>
+
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10">
                 <div className="flex flex-col items-center md:items-start">
                   <div className="inline-flex items-baseline gap-1">
                     <span className="text-2xl font-bold text-zinc-500">$</span>
-                    <span className="text-6xl font-black text-white">269</span>
+                    <span className="text-6xl font-black text-white">{isAnnual ? "2,570" : "269"}</span>
                   </div>
                   <p className="text-zinc-500 font-medium uppercase tracking-widest text-[10px] mt-1">
-                    per month — cancel anytime
+                    {isAnnual ? "per year — billed annually" : "per month — cancel anytime"}
                   </p>
                 </div>
 
-                <div className="hidden md:block w-px h-10 bg-zinc-800" />
+                {isAnnual && (
+                  <>
+                    <div className="hidden md:block w-px h-10 bg-zinc-800" />
 
-                <div className="flex flex-col items-center md:items-start pt-2 md:pt-0">
-                  <p className="text-2xl md:text-3xl font-black text-white">+$199</p>
-                  <p className="text-[#A78BFA] font-bold uppercase tracking-widest text-[10px]">
-                    one-time setup fee
-                  </p>
-                </div>
+                    <div className="flex flex-col items-center md:items-start pt-2 md:pt-0">
+                      <p className="text-2xl md:text-3xl font-black text-white">+3 EXTRA</p>
+                      <p className="text-[#A78BFA] font-bold uppercase tracking-widest text-[10px]">
+                        months free
+                      </p>
+                    </div>
+                  </>
+                )}
+
+                {!isAnnual && (
+                  <>
+                    <div className="hidden md:block w-px h-10 bg-zinc-800" />
+
+                    <div className="flex flex-col items-center md:items-start pt-2 md:pt-0">
+                      <p className="text-2xl md:text-3xl font-black text-white">+$199</p>
+                      <p className="text-[#A78BFA] font-bold uppercase tracking-widest text-[10px]">
+                        one-time setup fee
+                      </p>
+                    </div>
+                  </>
+                )}
               </div>
 
               <div className="max-w-2xl mx-auto mb-10">
