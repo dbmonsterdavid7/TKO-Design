@@ -13,8 +13,11 @@ import {
   Users,
   CheckCircle2,
   Calendar,
+  Search,
   Sparkles,
-  Heart
+  Heart,
+  Star,
+  ShieldCheck
 } from "lucide-react";
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
@@ -69,14 +72,58 @@ export default function Wellness() {
   return (
     <div className="relative">
       {/* Sticky Top Bar (Acquisition Style) */}
-      <div className="bg-zinc-900 py-3 px-6 sticky top-0 z-[60] flex justify-center items-center shadow-lg cursor-pointer" onClick={scrollToBooking}>
-        <div className="bg-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-widest text-zinc-900 flex items-center gap-2 mr-3">
-          <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-          LIVE
+      <div className="bg-zinc-900 sticky top-0 z-[60] shadow-lg cursor-pointer overflow-hidden py-2 md:py-3" onClick={scrollToBooking}>
+        {/* Mobile Scrolling Banner */}
+        <div className="md:hidden">
+          <div className="animate-marquee whitespace-nowrap">
+            <div className="flex items-center gap-x-4 px-4">
+              <p className="text-white text-[12px] font-bold tracking-wide flex items-center gap-x-2">
+                Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#A78BFA]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#A78BFA] uppercase">Rated 4.8</span>
+                <span className="flex items-center gap-0.5 mx-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star 
+                      key={i} 
+                      className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] animate-pulse" 
+                      style={{ animationDelay: `${i * 150}ms` }} 
+                    />
+                  ))}
+                </span>
+                <span className="text-[#A78BFA] font-bold">(86)</span>
+              </p>
+              {/* Duplicate for seamless scroll */}
+              <p className="text-white text-[12px] font-bold tracking-wide flex items-center gap-x-2">
+                Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#A78BFA]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#A78BFA] uppercase">Rated 4.8</span>
+                <span className="flex items-center gap-0.5 mx-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star 
+                      key={i + 5} 
+                      className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] animate-pulse" 
+                      style={{ animationDelay: `${i * 150}ms` }} 
+                    />
+                  ))}
+                </span>
+                <span className="text-[#A78BFA] font-bold">(86)</span>
+              </p>
+            </div>
+          </div>
         </div>
-        <p className="text-white text-[11px] md:text-sm font-bold uppercase tracking-wide">
-          In-Person Wellness Workshop | <span className="text-[#A78BFA]">Miami, FL</span>
-        </p>
+
+        {/* Desktop Static Banner */}
+        <div className="hidden md:flex justify-center items-center px-6">
+          <p className="text-white text-sm font-bold tracking-wide flex items-center gap-x-2">
+            Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#A78BFA]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#A78BFA] uppercase">Rated 4.8</span>
+            <span className="flex items-center gap-0.5 mx-1">
+              {[...Array(5)].map((_, i) => (
+                <Star 
+                  key={i} 
+                  className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)] animate-pulse" 
+                  style={{ animationDelay: `${i * 150}ms` }} 
+                />
+              ))}
+            </span>
+            <span className="text-[#A78BFA] font-bold">(86)</span>
+          </p>
+        </div>
       </div>
 
       {/* Hero Section (Acquisition Structure) */}
@@ -88,10 +135,10 @@ export default function Wellness() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tight mb-8 bg-gradient-to-br from-zinc-900 to-zinc-500 bg-clip-text text-transparent">
-              Are you the thing limiting <br className="hidden md:block" /> your wellness business?
+              You're Losing <br className="hidden md:block" /> Customers Every Day.
             </h1>
-            <h2 className="text-xl md:text-3xl font-normal text-zinc-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Join Our Scaling Workshop — Remove Yourself as the Single Point of Failure
+            <h2 className="text-base md:text-xl font-normal text-zinc-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Nearly <strong>half of all customer calls happen when you're unavailable.</strong> We text them back in 60 seconds — automatically — so you never lose another booking to a competitor who answered first.
             </h2>
           </motion.div>
 
@@ -129,111 +176,121 @@ export default function Wellness() {
           </p>
           <button 
             onClick={scrollToBooking}
-            className="w-full md:w-auto px-12 py-6 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-xl md:text-2xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)] active:scale-95"
+            className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)] active:scale-95"
           >
-            I'm Ready to Scale
+            STOP LOSING CUSTOMERS - $269/mo
           </button>
         </div>
       </section>
 
-      {/* Social Proof (Acquisition Structure) */}
+      {/* Market Data Section (Replacing Social Proof) */}
       <section className="py-24 px-6 bg-[#F5F3FF]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black uppercase mb-4 text-zinc-900">What people are saying:</h2>
+            <h2 className="text-3xl md:text-4xl font-black uppercase mb-4 text-zinc-900">Why speed to lead matters:</h2>
             <div className="w-24 h-1 bg-[#A78BFA] mx-auto opacity-50" />
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-             <div className="rounded-2xl overflow-hidden border-4 border-white shadow-xl aspect-[9/16] max-w-[320px] mx-auto">
-                <img 
-                  src="https://picsum.photos/seed/testimonial-wellness/600/1000" 
-                  alt="Review" 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-             </div>
-             <div className="space-y-8">
-                <img src="https://www.acquisition.com/hubfs/images/group-158_68b9d98332d69.png" alt="Reviews Badge" className="w-full max-w-md mx-auto md:mx-0 filter grayscale invert-0" referrerPolicy="no-referrer" />
-                <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100">
-                  <p className="text-lg italic text-zinc-600 mb-6">"Finally a marketing team that understands the wellness space. They don't just send traffic, they send patients ready to commit."</p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#A78BFA]/10 flex items-center justify-center">
-                      <Users className="w-6 h-6 text-[#A78BFA]" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-zinc-900">Dr. Michael Chen</p>
-                      <p className="text-sm text-zinc-500 text-left">Founder @ Restore Regenerative</p>
-                    </div>
-                  </div>
-                </div>
-             </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Stat 1 */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#A78BFA] transition-all">
+              <div>
+                <p className="text-5xl font-black text-[#A78BFA] mb-4">62%</p>
+                <p className="text-zinc-700 font-medium leading-relaxed mb-6">
+                  of customers will not call back if you don't answer the first time
+                </p>
+              </div>
+              <p className="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">
+                Source: Invoca Call Intelligence Report
+              </p>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#A78BFA] transition-all">
+              <div>
+                <p className="text-5xl font-black text-[#A78BFA] mb-4">48%</p>
+                <p className="text-zinc-700 font-medium leading-relaxed mb-6">
+                  of all inbound calls come after hours or during peak service hours
+                </p>
+              </div>
+              <p className="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">
+                Source: Zenoti Beauty & Wellness Benchmark Report
+              </p>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#A78BFA] transition-all">
+              <div>
+                <p className="text-5xl font-black text-[#A78BFA] mb-4">78%</p>
+                <p className="text-zinc-700 font-medium leading-relaxed mb-6">
+                  of customers book with whoever responds first — not the best option
+                </p>
+              </div>
+              <p className="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">
+                Source: LeadResponseManagement.org study
+              </p>
+            </div>
+
+            {/* Stat 4 */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#A78BFA] transition-all">
+              <div>
+                <p className="text-5xl font-black text-[#A78BFA] mb-4">$1,200</p>
+                <p className="text-zinc-700 font-medium leading-relaxed mb-6">
+                  average annual value of a single repeat client in beauty & wellness
+                </p>
+              </div>
+              <p className="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">
+                Based on avg ticket × typical visit frequency
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Heading (Acquisition Structure) */}
-      <section className="relative h-48 md:h-64 flex items-center justify-center overflow-hidden">
-        <img src="https://www.acquisition.com/hubfs/images/rectangle-91_68b9e04ac9f4d.png" className="absolute inset-0 w-full h-full object-cover filter brightness-[0.2]" alt="" />
-        <div className="relative z-10 text-center px-6">
-          <h2 className="text-2xl md:text-5xl font-bold text-white uppercase tracking-tight">
-            What you’ll get at the <span className="underline decoration-[#A78BFA]">in-person</span> workshop:
-          </h2>
-        </div>
-      </section>
+      {/* The Real Problem Section (Modified from Image Reference) */}
+      <section className="py-24 px-6 bg-[#09090b] relative border-y border-zinc-800">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#A78BFA] mb-6">
+              The Real Problem
+            </p>
+            <h2 className="text-4xl md:text-6xl font-black text-white leading-[1.1] mb-8">
+              Your phone goes to voicemail. <br />
+              They go to your competitor.
+            </h2>
+            <p className="text-lg md:text-xl text-zinc-400 leading-relaxed mb-12">
+              You're good at what you do. The problem isn't your service — it's what happens when someone tries to reach you and you're with a client, closed for the night, or just slammed.
+            </p>
 
-      {/* Benefits Content (Acquisition Structure) */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Benefit 1 */}
-            <div className="flex flex-col gap-6 group">
-               <div className="bg-zinc-100 text-[#A78BFA] font-black text-xl py-6 rounded-xl text-center border-b-4 border-[#A78BFA] group-hover:bg-[#F5F3FF] transition-colors">
-                  #1: Access To Our Directors
-               </div>
-               <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-100 shadow-lg">
-                  <img src="https://www.acquisition.com/hubfs/images/img-1_68b8c4340e027%20(1).png" alt="Director Access" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
-               </div>
-               <p className="text-zinc-600 leading-relaxed text-center">
-                  You’ll meet with our directors to get <span className="font-bold text-zinc-900">personalized help.</span> Everything from Marketing, Sales, Client Experience, and Strategy.
-               </p>
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-8 md:p-10 border-l-4 border-l-[#A78BFA] mb-12 shadow-2xl">
+              <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
+                If your average service is <span className="text-white font-bold">$70</span> and a client comes back every <span className="text-white font-bold">3 weeks</span>, that's one customer worth <span className="text-[#A78BFA] font-bold">~$1,200 per year.</span> If you miss <span className="text-white font-bold">just 5 calls a month</span>, you're leaving <span className="text-[#A78BFA] font-bold">$6,000+ in annual revenue</span> on the table — going straight to whoever texted them back first.
+              </p>
             </div>
 
-            {/* Benefit 2 */}
-            <div className="flex flex-col gap-6 group">
-               <div className="bg-zinc-100 text-[#A78BFA] font-black text-xl py-6 rounded-xl text-center border-b-4 border-[#A78BFA] group-hover:bg-[#F5F3FF] transition-colors">
-                  #2: Industry-Specific Growth
-               </div>
-               <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-100 shadow-lg">
-                  <img src="https://www.acquisition.com/hubfs/images/img-2_68b8c443878ab.png" alt="Scaling Logic" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
-               </div>
-               <p className="text-zinc-600 leading-relaxed text-center">
-                  We break down how we think, operate, and scale our high-revenue wellness brands. Showing you how to <span className="font-bold text-zinc-900">think like a high level CEO.</span>
-               </p>
+            <div className="space-y-8">
+              <p className="text-lg md:text-xl text-zinc-400 leading-relaxed">
+                The hard truth: most small businesses lose 10–20 potential customers a month to missed calls alone. Not because they're bad at business. Because they have <span className="text-[#A78BFA] font-bold">no system</span> to capture them.
+              </p>
+              <p className="text-lg md:text-xl text-zinc-400 leading-relaxed font-medium">
+                That's exactly what we fix. Instantly. For less than you'd spend on a single no-show appointment.
+              </p>
             </div>
 
-            {/* Benefit 3 */}
-            <div className="flex flex-col gap-6 group">
-               <div className="bg-zinc-100 text-[#A78BFA] font-black text-xl py-6 rounded-xl text-center border-b-4 border-[#A78BFA] group-hover:bg-[#F5F3FF] transition-colors">
-                  #3: 3-5 Tactical Next Steps
-               </div>
-               <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-100 shadow-lg">
-                  <img src="https://www.acquisition.com/hs-fs/hubfs/Workshop-1.webp" alt="Action Steps" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
-               </div>
-               <p className="text-zinc-600 leading-relaxed text-center">
-                  Leave with <span className="font-bold text-zinc-900">clear — actionable</span> next steps to break past your current constraint. Includes a comprehensive scaling packet.
-               </p>
+            <div className="mt-16 text-center">
+              <button 
+                onClick={scrollToBooking}
+                className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)] active:scale-95"
+              >
+                STOP LOSING CUSTOMERS - $269/mo
+              </button>
             </div>
-          </div>
-          
-          <div className="text-center mt-20">
-            <button 
-              onClick={scrollToBooking}
-              className="w-full md:w-auto px-12 py-6 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-xl md:text-2xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)]"
-            >
-              I'm Ready to Scale
-            </button>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -253,6 +310,87 @@ export default function Wellness() {
         </div>
       </section>
 
+      {/* Pricing & Features Section (Reduced Size) */}
+      <section className="py-16 px-6 bg-[#09090b] relative border-t border-zinc-800">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-black text-white leading-tight mb-3">
+              Everything included.<br />No hidden fees.
+            </h2>
+            <p className="text-base md:text-lg text-zinc-500">
+              One flat monthly price. We set it all up. Your business profits.
+            </p>
+          </div>
+
+          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl relative">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-[#A78BFA]" />
+            
+            <div className="p-6 md:p-10">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10">
+                <div className="flex flex-col items-center md:items-start">
+                  <div className="inline-flex items-baseline gap-1">
+                    <span className="text-2xl font-bold text-zinc-500">$</span>
+                    <span className="text-6xl font-black text-white">269</span>
+                  </div>
+                  <p className="text-zinc-500 font-medium uppercase tracking-widest text-[10px] mt-1">
+                    per month — cancel anytime
+                  </p>
+                </div>
+
+                <div className="hidden md:block w-px h-10 bg-zinc-800" />
+
+                <div className="flex flex-col items-center md:items-start pt-2 md:pt-0">
+                  <p className="text-2xl md:text-3xl font-black text-white">+$199</p>
+                  <p className="text-[#A78BFA] font-bold uppercase tracking-widest text-[10px]">
+                    one-time setup fee
+                  </p>
+                </div>
+              </div>
+
+              <div className="max-w-2xl mx-auto mb-10">
+                {[
+                  "Missed Call Text-Back System — connected to your business number",
+                  "Automated Google Review Funnel — sent after every appointment",
+                  "Custom Professional Website — built and hosted for you",
+                  "Online Booking Calendar or Appointment Request Form",
+                  "Google Business Profile Optimization (one-time, on signup)",
+                  "Full setup and onboarding — done for you within 7-10 days",
+                  "Ongoing system monitoring and support"
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-start gap-4 py-3 border-b border-zinc-800/50 group">
+                    <span className="text-[#A78BFA] font-black mt-0.5 shrink-0">—</span>
+                    <span className="text-zinc-300 text-sm md:text-base font-medium">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <button 
+                  onClick={scrollToBooking}
+                  className="w-full bg-[#6F00FF] hover:bg-[#5E00D9] text-white py-5 rounded-xl text-base md:text-lg font-black uppercase tracking-widest transition-all shadow-xl active:scale-95"
+                >
+                  Claim Your Spot — Get Started Today
+                </button>
+              </div>
+
+              <div className="mt-8 bg-zinc-900/50 border border-zinc-800 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
+                <div className="w-10 h-10 bg-[#A78BFA]/10 flex items-center justify-center rounded-xl shrink-0">
+                  <ShieldCheck className="w-6 h-6 text-[#A78BFA]" />
+                </div>
+                <div>
+                  <h4 className="text-white text-sm font-black uppercase tracking-tight mb-1">
+                    30-Day "It Works or It's Free" Guarantee
+                  </h4>
+                  <p className="text-zinc-500 text-xs leading-relaxed">
+                    If your missed call text-back system doesn't recover at least one customer in your first 30 days, we'll refund your first month. No questions asked. You have zero risk trying this.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section (Acquisition Structure) */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
@@ -262,47 +400,52 @@ export default function Wellness() {
           
           <div className="space-y-4">
             <AccordionItem 
-              title="What actually happens during the 2 days?" 
+              title="Do I need to change my business phone number?" 
               isOpen={openAccordion === 0}
               onToggle={() => setOpenAccordion(openAccordion === 0 ? null : 0)}
             >
               <div className="space-y-4 text-left">
-                <p>It's not an event. It's a workshop. At our Miami office.</p>
-                <p>Expect <span className="font-bold">zero motivational talks.</span> Meaning — we get tactical.</p>
-                <p>On day one, we break down how we fast track growth, recruit top talent, and frameworks we use for "high return" decision making.</p>
-                <p>On day two, we get hands on. You meet with our directors specialized in marketing, sales, and strategy to get personalized help for your practice.</p>
+                <p>No. We connect the system to your existing business number. Your clients call the same number they always have. The automation works in the background without you changing anything.</p>
               </div>
             </AccordionItem>
 
             <AccordionItem 
-              title="What do I walk away with?" 
+              title="What does the automated text actually say?" 
               isOpen={openAccordion === 1}
               onToggle={() => setOpenAccordion(openAccordion === 1 ? null : 1)}
             >
               <div className="space-y-4 text-left">
-                <p>The aim: you walk away with <span className="font-bold">3-5 tactical next steps.</span></p>
-                <p>Tailored advice to your practice size, industry, goals, and leadership style. It's hands-on help specific to your biggest challenge.</p>
+                <p>We write it in your voice and customize it for your business. A typical message looks like: <span className="italic">"Hey! Sorry we missed your call — we'd love to help. What can we do for you?"</span> When they reply, the conversation comes directly to your phone like a normal text thread. Our system can continue following up with the conversation to book an appointment with your customer or you can take over the conversation manually whenever.</p>
               </div>
             </AccordionItem>
 
             <AccordionItem 
-              title="Is this right for my practice size?" 
+              title="What if I already have a website?" 
               isOpen={openAccordion === 2}
               onToggle={() => setOpenAccordion(openAccordion === 2 ? null : 2)}
             >
               <div className="space-y-4 text-left">
-                <p><span className="font-bold">Size:</span> If you are under $250k/yr this is not a fit (yet.)</p>
-                <p>If you are between <span className="font-bold">$1m-$100m/yr</span>, then we can help. We separate groups by revenue tier so we can get tactical in your specific context.</p>
+                <p>We can either replace it with a better one, or add the booking form and connect the automation to your existing site. Either way, you're covered. Your old site doesn't go anywhere until you say so.</p>
               </div>
             </AccordionItem>
 
             <AccordionItem 
-              title="How much are tickets?" 
+              title="Can I cancel if it's not working?" 
               isOpen={openAccordion === 3}
               onToggle={() => setOpenAccordion(openAccordion === 3 ? null : 3)}
             >
               <div className="space-y-4 text-left">
-                <p>Tickets are $5,000 per seat. This allows us to keep the room quality high and give you direct access to top directors who handle our private portfolio.</p>
+                <p>Yes, anytime — no contracts, no cancellation fees. We also offer a 30-day money-back guarantee if the system doesn't recover at least one customer in your first month. We're confident it will.</p>
+              </div>
+            </AccordionItem>
+
+            <AccordionItem 
+              title="What kind of businesses does this work best for?" 
+              isOpen={openAccordion === 4}
+              onToggle={() => setOpenAccordion(openAccordion === 4 ? null : 4)}
+            >
+              <div className="space-y-4 text-left">
+                <p>Any local service business where calls = customers. Our best results come from med spas, lash studios, massage therapists, nail salons, hair salons, estheticians, yoga and Pilates studios, and appointment-based wellness practices. If people call you to book — this works.</p>
               </div>
             </AccordionItem>
           </div>
@@ -310,9 +453,9 @@ export default function Wellness() {
           <div className="text-center mt-12">
             <button 
               onClick={scrollToBooking}
-              className="w-full md:w-auto px-12 py-6 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-xl md:text-2xl font-black uppercase tracking-wider transition-all"
+              className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all"
             >
-              I'm Ready to Scale
+              STOP LOSING CUSTOMERS - $269/mo
             </button>
           </div>
         </div>
