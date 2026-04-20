@@ -84,8 +84,8 @@ export default function Wellness() {
     <div className="relative">
       {/* Sticky Top Bar (Acquisition Style) */}
       <div className="bg-zinc-900 sticky top-0 z-[60] shadow-lg cursor-pointer overflow-hidden py-2 md:py-3" onClick={scrollToBooking}>
-        {/* Mobile Scrolling Banner */}
-        <div className="md:hidden">
+        {/* Mobile & Tablet Scrolling Banner */}
+        <div className="lg:hidden">
           <div className="animate-marquee whitespace-nowrap">
             <div className="flex items-center gap-x-4 px-4">
               <p className="text-white text-[12px] font-bold tracking-wide flex items-center gap-x-2">
@@ -99,7 +99,7 @@ export default function Wellness() {
                     />
                   ))}
                 </span>
-                <span className="text-[#A78BFA] font-bold">(86)</span>
+                <span className="text-[#A78BFA] font-bold">(126)</span>
               </p>
               {/* Duplicate for seamless scroll */}
               <p className="text-white text-[12px] font-bold tracking-wide flex items-center gap-x-2">
@@ -113,14 +113,14 @@ export default function Wellness() {
                     />
                   ))}
                 </span>
-                <span className="text-[#A78BFA] font-bold">(86)</span>
+                <span className="text-[#A78BFA] font-bold">(126)</span>
               </p>
             </div>
           </div>
         </div>
 
         {/* Desktop Static Banner */}
-        <div className="hidden md:flex justify-center items-center px-6">
+        <div className="hidden lg:flex justify-center items-center px-6">
           <p className="text-white text-sm font-bold tracking-wide flex items-center gap-x-2">
             Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#A78BFA]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#A78BFA] uppercase">Rated 4.8</span>
             <span className="flex items-center gap-0.5 mx-1">
@@ -132,7 +132,7 @@ export default function Wellness() {
                 />
               ))}
             </span>
-            <span className="text-[#A78BFA] font-bold">(86)</span>
+            <span className="text-[#A78BFA] font-bold">(126)</span>
           </p>
         </div>
       </div>
