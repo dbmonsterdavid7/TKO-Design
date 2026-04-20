@@ -66,6 +66,16 @@ export default function Wellness() {
   const [isAnnual, setIsAnnual] = useState(false);
   const bookingRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const scrollToBooking = () => {
     bookingRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -296,17 +306,21 @@ export default function Wellness() {
       </section>
 
       {/* Booking Widget Placeholder (Acquisition Structure) */}
-      <section ref={bookingRef} className="py-24 px-6 bg-zinc-50 border-t border-zinc-200">
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-4 md:p-12 border border-zinc-200">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black uppercase tracking-tight text-zinc-900 mb-4">Book Your Spot</h2>
-            <p className="text-zinc-500 italic">Finding out if you are a fit for the Florida Workshop</p>
+      <section ref={bookingRef} className="py-12 px-6 bg-zinc-50 border-t border-zinc-200">
+        <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-4 md:p-8 border border-zinc-200">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-black uppercase tracking-tight text-zinc-900 mb-2">Book Your Spot</h2>
+            <p className="text-zinc-500 text-sm italic">Finding out if you are a fit for the Florida Workshop</p>
           </div>
           
-          <div className="aspect-[3/4] md:aspect-video rounded-xl bg-zinc-50 border-2 border-dashed border-zinc-200 flex flex-col items-center justify-center p-8 text-center group">
-            <Calendar className="w-16 h-16 text-zinc-300 group-hover:text-[#A78BFA] transition-colors mb-4" />
-            <p className="text-zinc-400 font-medium">Interactive Booking Widget Integration</p>
-            <p className="text-xs text-zinc-300 mt-2">(Meeting scheduler would render here)</p>
+          <div className="w-full">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/booking/J26pPUC4BfGNHYoc5HG9"
+              style={{ width: "100%", height: "650px", border: "none", overflow: "hidden" }}
+              scrolling="no"
+              id="J26pPUC4BfGNHYoc5HG9_1776645663774"
+              title="Wellness Booking Widget"
+            />
           </div>
         </div>
       </section>
