@@ -138,7 +138,7 @@ export default function Wellness() {
       </div>
 
       {/* Hero Section (Acquisition Structure) */}
-      <section className="relative z-10 pt-16 md:pt-32 pb-20 px-6 overflow-hidden">
+      <section className="relative z-10 pt-8 md:pt-32 pb-8 md:pb-20 px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -148,7 +148,7 @@ export default function Wellness() {
             <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tight mb-8 bg-gradient-to-br from-zinc-900 to-zinc-500 bg-clip-text text-transparent">
               You're Losing <br className="hidden md:block" /> Customers Every Day.
             </h1>
-            <h2 className="text-base md:text-xl font-normal text-zinc-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-base md:text-xl font-normal text-zinc-600 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
               Nearly <strong>half of all customer calls happen when you're unavailable.</strong> We text them back in 60 seconds — automatically — so you never lose another booking to a competitor who answered first.
             </h2>
           </motion.div>
@@ -180,11 +180,11 @@ export default function Wellness() {
       </section>
 
       {/* Action Section (Acquisition Structure) */}
-      <section className="bg-white py-24 px-6 relative z-10 border-y border-zinc-100">
+      <section className="bg-white pt-8 md:pt-24 pb-16 md:pb-24 px-6 relative z-10 border-y border-zinc-100">
         <div className="max-w-3xl mx-auto text-center">
           <button 
             onClick={scrollToBooking}
-            className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)] active:scale-95 mb-12"
+            className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)] active:scale-95 mb-8 md:mb-12"
           >
             STOP LOSING CUSTOMERS - $269/mo
           </button>
