@@ -306,19 +306,18 @@ export default function Wellness() {
       </section>
 
       {/* Booking Widget Placeholder (Acquisition Structure) */}
-      <section ref={bookingRef} className="py-12 px-6 bg-zinc-50 border-t border-zinc-200">
-        <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-4 md:p-8 pb-16 border border-zinc-200">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-black uppercase tracking-tight text-zinc-900 mb-2">Book Your Spot</h2>
+      <section ref={bookingRef} className="py-20 px-6 bg-zinc-50 border-t border-zinc-200">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-zinc-900">Book Your Spot</h2>
           </div>
-          
           <div className="w-full">
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/J26pPUC4BfGNHYoc5HG9"
-              className="w-full min-h-[950px] md:min-h-[820px]"
+              className="w-full min-h-[1050px] md:min-h-[900px]"
               style={{ border: "none", overflow: "hidden" }}
               scrolling="no"
-              id="J26pPUC4BfGNHYoc5HG9_1776689754025"
+              id="J26pPUC4BfGNHYoc5HG9_1776726426900"
               title="Wellness Booking Widget"
             />
           </div>
