@@ -183,7 +183,7 @@ export default function Wellness() {
       <section className="bg-white py-24 px-6 relative z-10 border-y border-zinc-100">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xl md:text-2xl text-zinc-900 mb-12 leading-relaxed">
-            It's a 2-day, interactive workshop where you'll receive <span className="font-bold border-b-2 border-[#A78BFA]">personalized, actionable insights</span> from the team that's scaled top-tier medical spas & wellness brands.
+            It's a <span className="font-bold border-b-2 border-[#A78BFA]">fully automated acquisition system</span> designed specifically to capture every missed call and turn them into loyal, repeat customers for your wellness business.
           </p>
           <button 
             onClick={scrollToBooking}
@@ -307,18 +307,18 @@ export default function Wellness() {
 
       {/* Booking Widget Placeholder (Acquisition Structure) */}
       <section ref={bookingRef} className="py-12 px-6 bg-zinc-50 border-t border-zinc-200">
-        <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-4 md:p-8 border border-zinc-200">
+        <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl p-4 md:p-8 pb-16 border border-zinc-200">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-black uppercase tracking-tight text-zinc-900 mb-2">Book Your Spot</h2>
-            <p className="text-zinc-500 text-sm italic">Finding out if you are a fit for the Florida Workshop</p>
           </div>
           
           <div className="w-full">
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/J26pPUC4BfGNHYoc5HG9"
-              style={{ width: "100%", height: "650px", border: "none", overflow: "hidden" }}
+              className="w-full min-h-[950px] md:min-h-[820px]"
+              style={{ border: "none", overflow: "hidden" }}
               scrolling="no"
-              id="J26pPUC4BfGNHYoc5HG9_1776645663774"
+              id="J26pPUC4BfGNHYoc5HG9_1776689754025"
               title="Wellness Booking Widget"
             />
           </div>
