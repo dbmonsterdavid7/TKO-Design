@@ -39,7 +39,7 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
         <span className={`text-lg font-bold transition-colors ${isOpen ? "text-[#A78BFA]" : "text-zinc-900 group-hover:text-[#A78BFA]"}`}>
           {title}
         </span>
-        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all border ${isOpen ? "bg-[#A78BFA] border-[#A78BFA] rotate-45" : "bg-zinc-100 border-zinc-200"}`}>
+        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all border shrink-0 ${isOpen ? "bg-[#A78BFA] border-[#A78BFA] rotate-45" : "bg-zinc-100 border-zinc-200"}`}>
           <Plus className={`w-5 h-5 transition-colors ${isOpen ? "text-white" : "text-zinc-600"}`} />
         </div>
       </button>
