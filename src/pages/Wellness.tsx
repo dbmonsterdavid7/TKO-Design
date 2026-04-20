@@ -182,15 +182,15 @@ export default function Wellness() {
       {/* Action Section (Acquisition Structure) */}
       <section className="bg-white py-24 px-6 relative z-10 border-y border-zinc-100">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xl md:text-2xl text-zinc-900 mb-12 leading-relaxed">
-            It's a <span className="font-bold border-b-2 border-[#A78BFA]">fully automated acquisition system</span> designed specifically to capture every missed call and turn them into loyal, repeat customers for your wellness business.
-          </p>
           <button 
             onClick={scrollToBooking}
-            className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)] active:scale-95"
+            className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)] active:scale-95 mb-12"
           >
             STOP LOSING CUSTOMERS - $269/mo
           </button>
+          <p className="text-xl md:text-2xl text-zinc-900 leading-relaxed">
+            It's a <span className="font-bold border-b-2 border-[#A78BFA]">fully automated acquisition system</span> designed specifically to capture every missed call and turn them into loyal, repeat customers for your wellness business.
+          </p>
         </div>
       </section>
 
