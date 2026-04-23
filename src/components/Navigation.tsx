@@ -10,9 +10,9 @@ export function Navigation() {
 
   if (isWellness) return null;
   
-  const accentColor = isWellness ? '#A78BFA' : '#a60724';
-  const accentShadow = isWellness ? 'rgba(167,139,250,0.5)' : 'rgba(166,7,36,0.5)';
-  const accentShadowHover = isWellness ? 'rgba(167,139,250,0.6)' : 'rgba(166,7,36,0.6)';
+  const accentColor = '#a60724';
+  const accentShadow = 'rgba(166,7,36,0.5)';
+  const accentShadowHover = 'rgba(166,7,36,0.6)';
 
   useEffect(() => {
     const handleScroll = () => {

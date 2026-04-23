@@ -10,7 +10,7 @@ export function Footer() {
     : "bg-zinc-950 border-t border-white/10";
   const textSecondary = isWellness ? "text-zinc-500" : "text-zinc-400";
   const textMuted = isWellness ? "text-zinc-400" : "text-zinc-600";
-  const accentColor = isWellness ? '#A78BFA' : '#a60724';
+  const accentColor = '#a60724';
 
   return (
     <footer className={`relative z-10 py-8 px-6 ${themeClasses}`}>

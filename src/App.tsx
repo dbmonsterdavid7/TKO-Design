@@ -36,11 +36,11 @@ function AppContent() {
   const isWellnessSubdomain = hostname.startsWith('wellness.');
   const isWellness = pathname === '/wellness' || isWellnessSubdomain;
   
-  const selectionColor = isWellness ? 'selection:bg-[#A78BFA]/30' : 'selection:bg-[#a60724]/30';
+  const selectionColor = 'selection:bg-[#a60724]/30';
   const themeClasses = isWellness 
-    ? "bg-[#F5F3FF] text-zinc-900" 
+    ? "bg-[#fff1f2] text-zinc-900" 
     : "bg-zinc-950 text-white";
-  const gridStroke = isWellness ? "stroke-[#A78BFA]/20" : "stroke-white/5";
+  const gridStroke = isWellness ? "stroke-[#a60724]/20" : "stroke-white/5";
 
   return (
     <div className={`relative min-h-screen transition-colors duration-500 ${themeClasses} ${selectionColor}`}>

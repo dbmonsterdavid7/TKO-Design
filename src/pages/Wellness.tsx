@@ -36,10 +36,10 @@ function AccordionItem({ title, children, isOpen, onToggle }: AccordionItemProps
         onClick={onToggle}
         className="w-full px-6 py-5 flex items-center justify-between text-left group"
       >
-        <span className={`text-lg font-bold transition-colors ${isOpen ? "text-[#A78BFA]" : "text-zinc-900 group-hover:text-[#A78BFA]"}`}>
+        <span className={`text-lg font-bold transition-colors ${isOpen ? "text-[#a60724]" : "text-zinc-900 group-hover:text-[#a60724]"}`}>
           {title}
         </span>
-        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all border shrink-0 ${isOpen ? "bg-[#A78BFA] border-[#A78BFA] rotate-45" : "bg-zinc-100 border-zinc-200"}`}>
+        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all border shrink-0 ${isOpen ? "bg-[#a60724] border-[#a60724] rotate-45" : "bg-zinc-100 border-zinc-200"}`}>
           <Plus className={`w-5 h-5 transition-colors ${isOpen ? "text-white" : "text-zinc-600"}`} />
         </div>
       </button>
@@ -89,7 +89,7 @@ export default function Wellness() {
           <div className="animate-marquee whitespace-nowrap">
             <div className="flex items-center gap-x-4 px-4">
               <p className="text-white text-[12px] font-bold tracking-wide flex items-center gap-x-2">
-                Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#A78BFA]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#A78BFA] uppercase">Rated 4.8</span>
+                Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#a60724]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#a60724] uppercase">Rated 4.8</span>
                 <span className="flex items-center gap-0.5 mx-1">
                   {[...Array(5)].map((_, i) => (
                     <Star 
@@ -99,11 +99,11 @@ export default function Wellness() {
                     />
                   ))}
                 </span>
-                <span className="text-[#A78BFA] font-bold">(126)</span>
+                <span className="text-[#a60724] font-bold">(126)</span>
               </p>
               {/* Duplicate for seamless scroll */}
               <p className="text-white text-[12px] font-bold tracking-wide flex items-center gap-x-2">
-                Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#A78BFA]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#A78BFA] uppercase">Rated 4.8</span>
+                Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#a60724]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#a60724] uppercase">Rated 4.8</span>
                 <span className="flex items-center gap-0.5 mx-1">
                   {[...Array(5)].map((_, i) => (
                     <Star 
@@ -113,7 +113,7 @@ export default function Wellness() {
                     />
                   ))}
                 </span>
-                <span className="text-[#A78BFA] font-bold">(126)</span>
+                <span className="text-[#a60724] font-bold">(126)</span>
               </p>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function Wellness() {
         {/* Desktop Static Banner */}
         <div className="hidden lg:flex justify-center items-center px-6">
           <p className="text-white text-sm font-bold tracking-wide flex items-center gap-x-2">
-            Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#A78BFA]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#A78BFA] uppercase">Rated 4.8</span>
+            Limited spots available — we only onboard 10 new clients per month to ensure quality <span className="text-[#a60724]">→ Claim your spot</span> <span className="text-white/40">|</span> <span className="text-[#a60724] uppercase">Rated 4.8</span>
             <span className="flex items-center gap-0.5 mx-1">
               {[...Array(5)].map((_, i) => (
                 <Star 
@@ -132,7 +132,7 @@ export default function Wellness() {
                 />
               ))}
             </span>
-            <span className="text-[#A78BFA] font-bold">(126)</span>
+            <span className="text-[#a60724] font-bold">(126)</span>
           </p>
         </div>
       </div>
@@ -153,28 +153,19 @@ export default function Wellness() {
             </h2>
           </motion.div>
 
-          {/* Video Embed Placeholder */}
+          {/* Takeover Marketing Logo */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="relative max-w-4xl mx-auto rounded-2xl md:rounded-[32px] overflow-hidden border-8 border-white shadow-2xl group cursor-pointer"
+            className="relative max-w-lg mx-auto py-12"
           >
             <img 
-              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80" 
-              alt="Workshop Overview" 
-              className="w-full aspect-video object-cover brightness-75 group-hover:brightness-90 transition-all duration-700"
+              src="https://lh3.googleusercontent.com/d/1sho8dWDi-MCebAi3XaxFl6Lrh0VK8ZPj" 
+              alt="Takeover Marketing Logo" 
+              className="w-full h-auto drop-shadow-2xl"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-[#A78BFA] flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-300">
-                <Play className="w-8 h-8 md:w-12 md:h-12 text-white fill-current ml-1" />
-              </div>
-            </div>
-            {/* Pulse effect like in Acquisition page */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-24 h-24 md:w-40 md:h-40 bg-[#A78BFA]/20 rounded-full animate-ping" />
-            </div>
           </motion.div>
         </div>
       </section>
@@ -184,29 +175,29 @@ export default function Wellness() {
         <div className="max-w-3xl mx-auto text-center">
           <button 
             onClick={scrollToBooking}
-            className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)] active:scale-95 mb-8 md:mb-12"
+            className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#a60724] hover:bg-[#8b061e] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(166,7,36,0.5)] active:scale-95 mb-8 md:mb-12"
           >
             STOP LOSING CUSTOMERS - $269/mo
           </button>
           <p className="text-xl md:text-2xl text-zinc-900 leading-relaxed">
-            It's a <span className="font-bold border-b-2 border-[#A78BFA]">fully automated acquisition system</span> designed specifically to capture every missed call and turn them into loyal, repeat customers for your wellness business.
+            It's a <span className="font-bold border-b-2 border-[#a60724]">fully automated acquisition system</span> designed specifically to capture every missed call and turn them into loyal, repeat customers for your wellness business.
           </p>
         </div>
       </section>
 
       {/* Market Data Section (Replacing Social Proof) */}
-      <section className="py-24 px-6 bg-[#F5F3FF]">
+      <section className="py-24 px-6 bg-[#fff1f2]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black uppercase mb-4 text-zinc-900">Why speed to lead matters:</h2>
-            <div className="w-24 h-1 bg-[#A78BFA] mx-auto opacity-50" />
+            <div className="w-24 h-1 bg-[#a60724] mx-auto opacity-50" />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Stat 1 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#A78BFA] transition-all">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#a60724] transition-all">
               <div>
-                <p className="text-5xl font-black text-[#A78BFA] mb-4">62%</p>
+                <p className="text-5xl font-black text-[#a60724] mb-4">62%</p>
                 <p className="text-zinc-700 font-medium leading-relaxed mb-6">
                   of customers will not call back if you don't answer the first time
                 </p>
@@ -217,9 +208,9 @@ export default function Wellness() {
             </div>
 
             {/* Stat 2 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#A78BFA] transition-all">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#a60724] transition-all">
               <div>
-                <p className="text-5xl font-black text-[#A78BFA] mb-4">48%</p>
+                <p className="text-5xl font-black text-[#a60724] mb-4">48%</p>
                 <p className="text-zinc-700 font-medium leading-relaxed mb-6">
                   of all inbound calls come after hours or during peak service hours
                 </p>
@@ -230,9 +221,9 @@ export default function Wellness() {
             </div>
 
             {/* Stat 3 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#A78BFA] transition-all">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#a60724] transition-all">
               <div>
-                <p className="text-5xl font-black text-[#A78BFA] mb-4">78%</p>
+                <p className="text-5xl font-black text-[#a60724] mb-4">78%</p>
                 <p className="text-zinc-700 font-medium leading-relaxed mb-6">
                   of customers book with whoever responds first — not the best option
                 </p>
@@ -243,9 +234,9 @@ export default function Wellness() {
             </div>
 
             {/* Stat 4 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#A78BFA] transition-all">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between items-center text-center group hover:border-[#a60724] transition-all">
               <div>
-                <p className="text-5xl font-black text-[#A78BFA] mb-4">$1,200</p>
+                <p className="text-5xl font-black text-[#a60724] mb-4">$1,200</p>
                 <p className="text-zinc-700 font-medium leading-relaxed mb-6">
                   average annual value of a single repeat client in beauty & wellness
                 </p>
@@ -267,7 +258,7 @@ export default function Wellness() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#A78BFA] mb-6">
+            <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-[#a60724] mb-6">
               The Real Problem
             </p>
             <h2 className="text-4xl md:text-6xl font-black text-white leading-[1.1] mb-8">
@@ -278,15 +269,15 @@ export default function Wellness() {
               You're good at what you do. The problem isn't your service — it's what happens when someone tries to reach you and you're with a client, closed for the night, or just slammed.
             </p>
 
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-8 md:p-10 border-l-4 border-l-[#A78BFA] mb-12 shadow-2xl">
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-8 md:p-10 border-l-4 border-l-[#a60724] mb-12 shadow-2xl">
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed">
-                If your average service is <span className="text-white font-bold">$70</span> and a client comes back every <span className="text-white font-bold">3 weeks</span>, that's one customer worth <span className="text-[#A78BFA] font-bold">~$1,200 per year.</span> If you miss <span className="text-white font-bold">just 5 calls a month</span>, you're leaving <span className="text-[#A78BFA] font-bold">$6,000+ in annual revenue</span> on the table — going straight to whoever texted them back first.
+                If your average service is <span className="text-white font-bold">$70</span> and a client comes back every <span className="text-white font-bold">3 weeks</span>, that's one customer worth <span className="text-[#a60724] font-bold">~$1,200 per year.</span> If you miss <span className="text-white font-bold">just 5 calls a month</span>, you're leaving <span className="text-[#a60724] font-bold">$6,000+ in annual revenue</span> on the table — going straight to whoever texted them back first.
               </p>
             </div>
 
             <div className="space-y-8">
               <p className="text-lg md:text-xl text-zinc-400 leading-relaxed">
-                The hard truth: most small businesses lose 10–20 potential customers a month to missed calls alone. Not because they're bad at business. Because they have <span className="text-[#A78BFA] font-bold">no system</span> to capture them.
+                The hard truth: most small businesses lose 10–20 potential customers a month to missed calls alone. Not because they're bad at business. Because they have <span className="text-[#a60724] font-bold">no system</span> to capture them.
               </p>
               <p className="text-lg md:text-xl text-zinc-400 leading-relaxed font-medium">
                 That's exactly what we fix. Instantly. For less than you'd spend on a single no-show appointment.
@@ -296,7 +287,7 @@ export default function Wellness() {
             <div className="mt-16 text-center">
               <button 
                 onClick={scrollToBooking}
-                className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(111,0,255,0.5)] active:scale-95"
+                className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#a60724] hover:bg-[#8b061e] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all shadow-[0_10px_40px_-10px_rgba(166,7,36,0.5)] active:scale-95"
               >
                 STOP LOSING CUSTOMERS - $269/mo
               </button>
@@ -337,21 +328,21 @@ export default function Wellness() {
           </div>
 
           <div className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl relative">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-[#A78BFA]" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-[#a60724]" />
             
             <div className="p-6 md:p-10">
               {/* Billing Toggle */}
               <div className="flex items-center justify-center gap-4 mb-10">
-                <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${!isAnnual ? "text-[#A78BFA]" : "text-zinc-500"}`}>Monthly</span>
+                <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${!isAnnual ? "text-[#a60724]" : "text-zinc-500"}`}>Monthly</span>
                 <button 
                   onClick={() => setIsAnnual(!isAnnual)}
-                  className={`w-12 h-6 bg-zinc-800 rounded-full relative flex items-center p-1 transition-all duration-500 border hover:border-zinc-500 ${isAnnual ? "shadow-[0_0_20px_rgba(167,139,250,0.6)] border-[#A78BFA]/50" : "border-zinc-700"}`}
+                  className={`w-12 h-6 bg-zinc-800 rounded-full relative flex items-center p-1 transition-all duration-500 border hover:border-zinc-500 ${isAnnual ? "shadow-[0_0_20px_rgba(166,7,36,0.6)] border-[#a60724]/50" : "border-zinc-700"}`}
                 >
-                  <div className={`w-4 h-4 bg-[#A78BFA] rounded-full transition-all duration-300 shadow-[0_0_10px_rgba(167,139,250,0.3)] ${isAnnual ? "translate-x-6" : "translate-x-0"}`} />
+                  <div className={`w-4 h-4 bg-[#a60724] rounded-full transition-all duration-300 shadow-[0_0_10px_rgba(166,7,36,0.3)] ${isAnnual ? "translate-x-6" : "translate-x-0"}`} />
                 </button>
                 <div className="flex items-center gap-2">
-                  <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${isAnnual ? "text-[#A78BFA]" : "text-zinc-500"}`}>Annual</span>
-                  <span className="bg-[#A78BFA] text-zinc-900 text-[10px] font-black px-2 py-0.5 rounded shadow-[0_0_15px_rgba(167,139,250,0.4)] animate-pulse">SAVE 25%</span>
+                  <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${isAnnual ? "text-[#a60724]" : "text-zinc-500"}`}>Annual</span>
+                  <span className="bg-[#a60724] text-zinc-900 text-[10px] font-black px-2 py-0.5 rounded shadow-[0_0_15px_rgba(166,7,36,0.4)] animate-pulse">SAVE 25%</span>
                 </div>
               </div>
 
@@ -372,7 +363,7 @@ export default function Wellness() {
 
                     <div className="flex flex-col items-center md:items-start pt-2 md:pt-0">
                       <p className="text-2xl md:text-3xl font-black text-white">+3 EXTRA</p>
-                      <p className="text-[#A78BFA] font-bold uppercase tracking-widest text-[10px]">
+                      <p className="text-[#a60724] font-bold uppercase tracking-widest text-[10px]">
                         months free
                       </p>
                     </div>
@@ -385,7 +376,7 @@ export default function Wellness() {
 
                     <div className="flex flex-col items-center md:items-start pt-2 md:pt-0">
                       <p className="text-2xl md:text-3xl font-black text-white">+$199</p>
-                      <p className="text-[#A78BFA] font-bold uppercase tracking-widest text-[10px]">
+                      <p className="text-[#a60724] font-bold uppercase tracking-widest text-[10px]">
                         one-time setup fee
                       </p>
                     </div>
@@ -404,7 +395,7 @@ export default function Wellness() {
                   "Ongoing system monitoring and support"
                 ].map((feature, i) => (
                   <div key={i} className="flex items-start gap-4 py-3 border-b border-zinc-800/50 group">
-                    <span className="text-[#A78BFA] font-black mt-0.5 shrink-0">—</span>
+                    <span className="text-[#a60724] font-black mt-0.5 shrink-0">—</span>
                     <span className="text-zinc-300 text-sm md:text-base font-medium">{feature}</span>
                   </div>
                 ))}
@@ -413,15 +404,15 @@ export default function Wellness() {
               <div className="text-center">
                 <button 
                   onClick={scrollToBooking}
-                  className="w-full bg-[#6F00FF] hover:bg-[#5E00D9] text-white py-5 rounded-xl text-base md:text-lg font-black uppercase tracking-widest transition-all shadow-xl active:scale-95"
+                  className="w-full bg-[#a60724] hover:bg-[#8b061e] text-white py-5 rounded-xl text-base md:text-lg font-black uppercase tracking-widest transition-all shadow-xl active:scale-95"
                 >
                   Claim Your Spot — Get Started Today
                 </button>
               </div>
 
               <div className="mt-8 bg-zinc-900/50 border border-zinc-800 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
-                <div className="w-10 h-10 bg-[#A78BFA]/10 flex items-center justify-center rounded-xl shrink-0">
-                  <ShieldCheck className="w-6 h-6 text-[#A78BFA]" />
+                <div className="w-10 h-10 bg-[#a60724]/10 flex items-center justify-center rounded-xl shrink-0" >
+                  <ShieldCheck className="w-6 h-6 text-[#a60724]" />
                 </div>
                 <div>
                   <h4 className="text-white text-sm font-black uppercase tracking-tight mb-1">
@@ -499,7 +490,7 @@ export default function Wellness() {
           <div className="text-center mt-12">
             <button 
               onClick={scrollToBooking}
-              className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#6F00FF] hover:bg-[#5E00D9] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all"
+              className="w-full md:w-auto px-10 py-5 rounded-xl bg-[#a60724] hover:bg-[#8b061e] text-white text-lg md:text-xl font-black uppercase tracking-wider transition-all"
             >
               STOP LOSING CUSTOMERS - $269/mo
             </button>

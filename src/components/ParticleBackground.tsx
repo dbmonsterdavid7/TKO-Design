@@ -15,8 +15,8 @@ export const ParticleBackground: React.FC = () => {
   const location = useLocation();
   const hostname = window.location.hostname;
   const isWellness = location.pathname === '/wellness' || hostname.startsWith('wellness.');
-  const color = isWellness ? 'rgba(167,139,250,0.15)' : 'rgba(166,7,36,0.15)';
-  const particleBg = isWellness ? '#A78BFA' : 'white';
+  const color = 'rgba(166,7,36,0.15)';
+  const particleBg = isWellness ? '#a60724' : 'white';
 
   useEffect(() => {
     const newParticles = Array.from({ length: 50 }).map((_, i) => ({
