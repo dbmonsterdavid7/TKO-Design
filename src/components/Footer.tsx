@@ -41,7 +41,7 @@ export function Footer() {
             <Link to="/privacy-policy" className={`hover:text-${isWellness ? "zinc-900" : "white"} transition-colors`}>Privacy Policy</Link>
             <Link to="/terms-of-use" className={`hover:text-${isWellness ? "zinc-900" : "white"} transition-colors`}>Terms of Use</Link>
             <Link to="/faq" className={`hover:text-${isWellness ? "zinc-900" : "white"} transition-colors`}>FAQ</Link>
-            <a href="https://wellness.tkovermarketing.com" className={`hover:text-${isWellness ? "zinc-900" : "white"} transition-colors`}>Wellness</a>
+            <Link to="/wellness" className={`hover:text-${isWellness ? "zinc-900" : "white"} transition-colors`}>Wellness</Link>
           </div>
         </div>
         <div className={`text-[10px] leading-relaxed ${textMuted} max-w-4xl`}>
